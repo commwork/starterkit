@@ -291,21 +291,11 @@
 }
 
 /* ************** ACF ************** */
-// Flexible Content
-.acf-field-flexible-content {
-    .layout {
-        &[data-layout="dynamic_modules"] {
-            .acf-fc-layout-actions-wrap {
-                background-color: #efefef;
-            }
-        }
-
-        &:not([data-layout="dynamic_modules"]) {
-            .acf-fc-layout-actions-wrap {
-                background-color: #e7e2cf;
-            }
-        }
-    }
+// Flexible Content hero modules special background color
+#layouts > .acf-input > .acf-flexible-content > .ui-sortable > .layout:not([data-layout="dynamic_modules"]) {
+    > .acf-fc-layout-actions-wrap {
+		background-color: #ede4d8;
+	}
 }
 
 // Tooltip

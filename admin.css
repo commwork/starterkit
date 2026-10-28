@@ -189,11 +189,8 @@
 }
 
 /* ************** ACF ************** */
-.acf-field-flexible-content .layout[data-layout=dynamic_modules] .acf-fc-layout-actions-wrap {
-  background-color: #efefef;
-}
-.acf-field-flexible-content .layout:not([data-layout=dynamic_modules]) .acf-fc-layout-actions-wrap {
-  background-color: #e7e2cf;
+#layouts > .acf-input > .acf-flexible-content > .ui-sortable > .layout:not([data-layout=dynamic_modules]) > .acf-fc-layout-actions-wrap {
+  background-color: #ede4d8;
 }
 
 .acf-tooltip.acf-fc-popup ul {
