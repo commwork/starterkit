@@ -12,71 +12,76 @@
 			background-repeat: no-repeat;
 			background-position: top .1em left;
 			background-size: 1.35em auto;
-			// padding-left: 2.4em;
 			min-height: 1.5em;
 		}
 
 		&__additional {
 			padding-left: 0;
+			position: relative;
+
+			&::before {
+				content: '(';
+			}
+
+			&::after {
+				content: ')';
+			}
+		}
+
+		> div::before {
+			content: '';
+			display: block;
+			order: -2;
+			flex-shrink: 0;
+			width: 1.75em;
+			height: 1.75em;
+			border-radius: var(--radius-interact);
+			background-color: $grey;
+		}
+
+		> div::after {
+			content: '';
+			order: -1;
+			flex-shrink: 0;
+			width: 0.9em;
+			height: 0.9em;
+			margin-left: -2.325em;
+			margin-right: 0.425em;
+			background-color: $primary;
+			-webkit-mask-size: contain;
+			mask-size: contain;
+			-webkit-mask-repeat: no-repeat;
+			mask-repeat: no-repeat;
+			-webkit-mask-position: center;
+			mask-position: center;
+			pointer-events: none;
 		}
 
 		&--phone .email-phone-fax-item__value {
-			&::before {
-				content: '';
-				display: block;
-				width: 1.75em;
-				height: 1.75em;
-				background-size: auto .9em;
-				background-position: center;
-				background-repeat: no-repeat;
-				background-color: $grey;
-				border-radius: var(--radius-interact);
-				background-image: url('assets/svg/24/24-phone.svg');
+			&::after {
+				-webkit-mask-image: url('assets/svg/24/24-phone.svg');
+				mask-image: url('assets/svg/24/24-phone.svg');
 			}
 		}
 
 		&--fax .email-phone-fax-item__value {
-			&::before {
-				content: '';
-				display: block;
-				width: 1.75em;
-				height: 1.75em;
-				background-size: auto .9em;
-				background-position: center;
-				background-repeat: no-repeat;
-				background-color: $grey;
-				border-radius: var(--radius-interact);
-				background-image: url('assets/svg/24/24-print.svg');
+			&::after {
+				-webkit-mask-image: url('assets/svg/24/24-print.svg');
+				mask-image: url('assets/svg/24/24-print.svg');
 			}
 		}
 
 		&--email .email-phone-fax-item__value {
-			&::before {
-				content: '';
-				display: block;
-				width: 1.75em;
-				height: 1.75em;
-				background-size: auto .9em;
-				background-position: center;
-				background-repeat: no-repeat;
-				background-color: $grey;
-				border-radius: var(--radius-interact);
-				background-image: url('assets/svg/24/24-mail.svg');
+			&::after {
+				-webkit-mask-image: url('assets/svg/24/24-mail.svg');
+				mask-image: url('assets/svg/24/24-mail.svg');
 			}
 		}
 
 		&--address .email-phone-fax-item__value {
-			&::before {
-				content: '';
-				display: block;
-				width: 1.75em;
-				height: 1.75em;
-				background-size: auto .9em;
-				background-position: center;
-				background-repeat: no-repeat;
-				background-color: $grey;
-				border-radius: var(--radius-interact);
-				background-image: url('assets/svg/24/24-pin-3.svg');
+			&::after {
+				-webkit-mask-image: url('assets/svg/24/24-pin-3.svg');
+				mask-image: url('assets/svg/24/24-pin-3.svg');
 			}
 		}
 	}

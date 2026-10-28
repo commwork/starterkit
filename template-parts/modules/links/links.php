@@ -12,7 +12,7 @@
 							continue;
 						}
 						?>
-						<a href="<?php echo esc_url( $url['url'] ); ?>" class="btn primary arrow-right" target="<?php echo esc_attr( $url['target'] ?? '_self' ); ?>"><?php echo esc_html( $url['title'] ?? '' ); ?></a>
+						<a href="<?php echo esc_url( $url['url'] ); ?>" class="btn primary arrow-right icon-color-primary" target="<?php echo esc_attr( $url['target'] ?? '_self' ); ?>"><?php echo esc_html( $url['title'] ?? '' ); ?></a>
 					<?php endwhile; ?>
 				</div>
 			</div>

@@ -76,7 +76,7 @@ $slide_size = 'img-large';
                                                 <div class="slider-img-meta-scroll">
                                                     <?php if ( $display_title ) : ?>
                                                         <div class="slider-meta-title-row">
-                                                            <div class="slider-meta-title h5">
+                                                            <div class="slider-meta-title">
                                                                 <?php echo esc_html( $title ); ?>
                                                             </div>
                                                             <?php if ( $slider_collapsible_caption ) : ?>

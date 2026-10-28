@@ -1,8 +1,8 @@
 @use "2-mixins" as *;
 
 // Colors
-$primary : #9e74d9;
-$secondary : #2ab35e;
+$primary : #cc6fdc;
+$secondary : #2a95b3;
 $tertiary : #90cee2;
 
 $white : #ffffff;
@@ -64,6 +64,7 @@ $font : "DM Sans", sans-serif;
 	--spacing-l: 2.1875rem;
 	--spacing-xl: 5rem;
 	--spacing-xxl: 7.5rem;
+	--body-spacing-inner-x: 3rem;
 
 	@include md-down {
 		--spacing-xxs: 0.1875rem;
@@ -74,5 +75,9 @@ $font : "DM Sans", sans-serif;
 		--spacing-l: 1.75rem;
 		--spacing-xl: 2.5rem;
 		--spacing-xxl: 5rem;
+		--body-spacing-inner-x: 1.25rem;
 	}
 }
+
+// Body spacing variables
+$body-spacing-inner-x: var(--body-spacing-inner-x);

@@ -3,7 +3,7 @@
 
 .persons-list {
     .person-image {
-        aspect-ratio: 15 / 9;
+        aspect-ratio: 4 / 3;
         overflow: hidden;
 
         img {
@@ -15,7 +15,6 @@
     }
 
     .person-content {
-        // margin-top: calc(var(--spacing-l) * -1.3);
         background-color: $grey;
         color: $black;
         z-index: 1;
@@ -23,7 +22,6 @@
 
         .person-title {
             color: $primary;
-            // margin-top: 0 !important;
         }
 
         .person-position {

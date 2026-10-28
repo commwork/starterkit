@@ -1,0 +1,26 @@
+{
+    "key": "ui_options_page_6ae1bf8cf321a",
+    "title": "Optionen (Global)",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Optionen (Global)",
+    "menu_slug": "options-global",
+    "parent_slug": "none",
+    "advanced_configuration": 0,
+    "icon_url": "",
+    "menu_title": "",
+    "position": "",
+    "redirect": 0,
+    "description": "",
+    "menu_icon": {
+        "type": "dashicons",
+        "value": "dashicons-admin-generic"
+    },
+    "update_button": "Aktualisieren",
+    "updated_message": "Optionen aktualisiert",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": 0,
+    "modified": 1793179584
+}

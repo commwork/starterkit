@@ -211,8 +211,8 @@ foreach ( $starterkit_menu_by_parent[0] ?? array() as $starterkit_top_item ) {
 				</div>
 
 				<button type="button" class="header-burger" aria-label="<?php esc_attr_e( 'Open menu', 'starterkit' ); ?>" aria-expanded="false" aria-controls="header-nav-mobile">
-					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/burger-closed.svg" alt="" class="header-burger-icon header-burger-icon-closed" width="24" height="24">
-					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/burger-opened.svg" alt="" class="header-burger-icon header-burger-icon-opened" width="24" height="24">
+					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/svg/32/32-menu-3.svg" alt="" class="header-burger-icon header-burger-icon-closed" width="24" height="24">
+					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/svg/32/32-xmark.svg" alt="" class="header-burger-icon header-burger-icon-opened" width="24" height="24">
 				</button>
 			</div>
 

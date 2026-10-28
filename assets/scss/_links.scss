@@ -30,6 +30,14 @@ a:not([class*="btn"]):not(.skip-link) {
 			}
 		}
 	}
+
+	&.icon-color-primary {
+		.icon {
+			svg {
+				fill: $primary;
+			}
+		}
+	}
 }
 
 .btn {
@@ -63,16 +71,26 @@ a:not([class*="btn"]):not(.skip-link) {
 		}
 
         &.arrow-right {
-            background-image: url("assets/svg/24/24-arrow-right.svg");
-            background-size: .85em;
-            background-position: right .75em top .675em;
-            background-repeat: no-repeat;
+            position: relative;
             padding-right: 2.6em;
 
-            @media (hover: hover) {
-				&:hover {
-					background-image: url("assets/svg/24/24-arrow-right.svg");
-				}
+            &::after {
+                content: "";
+                position: absolute;
+                top: .675em;
+                right: .75em;
+                width: .85em;
+                height: .85em;
+                background-color: currentColor;
+                -webkit-mask-image: url("assets/svg/24/24-arrow-right.svg");
+                mask-image: url("assets/svg/24/24-arrow-right.svg");
+                -webkit-mask-size: contain;
+                mask-size: contain;
+                -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+                -webkit-mask-position: center;
+                mask-position: center;
+                pointer-events: none;
             }
         }
 

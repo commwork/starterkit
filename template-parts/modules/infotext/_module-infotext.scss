@@ -4,14 +4,14 @@
 .module-infotext {
 	.module-infotext__content {
 		background-color: $attention;
-		color: $white;
+		// color: $white;
 
 		a {
-			color: $white;
+			// color: $white;
 
 			@media (hover: hover) {
 				&:hover {
-					color: $white;
+					// color: $white;
 					text-decoration: none;
 				}
 			}

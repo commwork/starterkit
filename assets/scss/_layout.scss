@@ -81,23 +81,21 @@ body{
     background-color: $grey;
     margin-top: var(--spacing-xl);
     border-radius: var(--radius-xl);
-    margin-left: 1rem;
-    margin-right: 1rem;
-    width: calc(100% - 2rem);
+    margin-left: $body-spacing-inner-x;
+    margin-right: $body-spacing-inner-x;
+    width: calc(100% - $body-spacing-inner-x * 2);
 }
 
 section.section {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    // padding-left: var(--spacing-s);
-    // padding-right: var(--spacing-s);
+    margin-left: $body-spacing-inner-x;
+    margin-right: $body-spacing-inner-x;
 
     &--bordered {
         position: relative;
         background-color: $grey;
-        left: 2rem;
-        right: 2rem;
-        width: calc(100% - 4rem);
+        left: $body-spacing-inner-x;
+        right: $body-spacing-inner-x;
+        width: calc(100% - $body-spacing-inner-x * 2);
         z-index: 0;
         border-radius: var(--radius-xl);
     }

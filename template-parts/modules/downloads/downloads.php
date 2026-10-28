@@ -25,10 +25,6 @@
                                 ?>
                                 <li>
                                     <a href="<?php echo esc_url( $file['url'] ); ?>" download aria-label="<?php echo esc_attr( $aria_label ); ?>" class="meta">
-                                        <span class="file-icon">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/svg/24/24-data-download.svg" alt="<?php echo esc_attr( $file_title ); ?>">
-                                        </span>
-
                                         <span class="file-title">
                                             <?php echo esc_html( $file_title ); ?>
                                         </span>

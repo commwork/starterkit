@@ -1,2 +1,14 @@
-
+.acf-tooltip.acf-fc-popup ul {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.acf-tooltip.acf-fc-popup ul li {
+  height: auto;
+}
+.acf-tooltip.acf-fc-popup ul li a {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
 /*# sourceMappingURL=admin.css.map */

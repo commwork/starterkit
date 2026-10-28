@@ -1,0 +1,19 @@
+.acf-tooltip {
+    &.acf-fc-popup {
+        ul {
+            padding-top: 7px;
+            padding-bottom: 7px;
+
+            li {
+                height: auto;
+
+                a {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    padding-top: 4px;
+                    padding-bottom: 4px;
+                }
+            }
+        }
+    }
+}
