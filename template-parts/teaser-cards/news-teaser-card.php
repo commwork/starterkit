@@ -7,10 +7,16 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$icon_uri = get_template_directory_uri() . '/assets/images/icons/24/';
+$icon_uri    = get_template_directory_uri() . '/assets/images/icons/24/';
+$card_args   = ( isset( $args ) && is_array( $args ) ) ? $args : array();
+$card_class  = ! empty( $card_args['class'] ) ? (string) $card_args['class'] : 'col-12 col-md-6 col-xxl-4';
+$card_class .= ' post-item';
+if ( is_sticky() ) {
+	$card_class .= ' post-item--sticky';
+}
 ?>
 
-<article class="col-12 col-md-6 col-xxl-4 post-item<?php echo is_sticky() ? ' post-item--sticky' : ''; ?>">
+<article class="<?php echo esc_attr( $card_class ); ?>">
     <a href="<?php the_permalink(); ?>" class="wrapper-link post-item-content box box--s">					
         <?php if ( has_post_thumbnail() ) : ?>
             <div class="post-item-image">

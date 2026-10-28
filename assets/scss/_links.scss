@@ -103,15 +103,32 @@ a:not([class*="btn"]):not(.skip-link) {
         }
 
         &.arrow-left {
-            background-image: url("assets/svg/24/24-arrow-left.svg");
-            background-size: 1em;
-            background-position: left .75em center;
-            background-repeat: no-repeat;
+            position: relative;
             padding-left: 2.6em;
 
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: .75em;
+                width: 1em;
+                height: 1em;
+                transform: translateY(-50%);
+                background-color: $primary;
+                -webkit-mask-image: url("assets/svg/24/24-arrow-left.svg");
+                mask-image: url("assets/svg/24/24-arrow-left.svg");
+                -webkit-mask-size: contain;
+                mask-size: contain;
+                -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+                -webkit-mask-position: center;
+                mask-position: center;
+                pointer-events: none;
+            }
+
             @media (hover: hover) {
-				&:hover {
-					background-image: url("assets/svg/24/24-arrow-left.svg");
+				&:hover::after {
+					background-color: $white;
 				}
             }
         }
@@ -167,16 +184,27 @@ a:not([class*="btn"]):not(.skip-link) {
         }
 
         &.arrow-left {
-            background-image: url("assets/svg/24/24-arrow-left.svg");
-            background-size: 1em;
-            background-position: left .75em center;
-            background-repeat: no-repeat;
+            position: relative;
             padding-left: 2.6em;
 
-            @media (hover: hover) {
-				&:hover {
-					background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round' viewBox='0 0 20 20'%3E%3Cpath d='M1.765 10h16.47M10 1.25 18.235 10 10 18.75' style='fill:none;fill-rule:nonzero;stroke:%23e2001a;stroke-width:2px' transform='matrix(-1 0 0 -1 20 20)'/%3E%3C/svg%3E");
-				}
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: .75em;
+                width: 1em;
+                height: 1em;
+                transform: translateY(-50%);
+                background-color: $primary;
+                -webkit-mask-image: url("assets/svg/24/24-arrow-left.svg");
+                mask-image: url("assets/svg/24/24-arrow-left.svg");
+                -webkit-mask-size: contain;
+                mask-size: contain;
+                -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+                -webkit-mask-position: center;
+                mask-position: center;
+                pointer-events: none;
             }
         }
 	}

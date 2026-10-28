@@ -2,7 +2,7 @@
 @use "2-mixins" as *;
 @use "3-typography" as *;
 
-// Shared news-style post teaser cards (archive, news layout, subpages layout).
+// Shared news-style post teaser cards (archive, news layout, news slider, subpages layout).
 .section-news-archive,
 .section-news-module,
 .section-teasers-subpages {
@@ -22,7 +22,12 @@
     &:not(.section--bg-grey) {
         background-color: $white;
     }
+}
 
+.section-news-archive,
+.section-news-module,
+.section-teasers-subpages,
+.section-news-slider {
     .module-content {
         .post-item {
             .post-item-content {

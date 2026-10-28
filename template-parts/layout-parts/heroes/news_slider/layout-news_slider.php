@@ -44,46 +44,13 @@ $news_query = new WP_Query(
 							<?php
 							while ( $news_query->have_posts() ) :
 								$news_query->the_post();
-								?>
-								<article class="swiper-slide post-item<?php echo is_sticky() ? ' post-item--sticky' : ''; ?>">
-									<div class="post-item-content box box--s">
-										<?php if ( has_post_thumbnail() ) : ?>
-											<a href="<?php the_permalink(); ?>" class="post-item-image">
-												<?php the_post_thumbnail( 'img-square' ); ?>
-											</a>
-										<?php else : ?>
-											<a href="<?php the_permalink(); ?>" class="post-item-image">
-												<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/news-post-thumb-placeholder.png' ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>">
-											</a>
-										<?php endif; ?>
-
-										<div class="stack">
-											<?php if ( ! is_sticky() ) : ?>
-												<p class="meta"><?php echo esc_html( get_the_date() ); ?></p>
-											<?php endif; ?>
-
-											<div class="h4">
-												<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-											</div>
-											
-											<?php
-											$custom_excerpt = trim( (string) get_field( 'custom_excerpt' ) );
-											if ( $custom_excerpt !== '' ) :
-												?>
-											<div>
-												<?php echo wp_kses_post( wp_trim_words( $custom_excerpt, 24 ) ); ?>
-											</div>
-												<?php
-											endif;
-											?>
-
-											<a class="btn primary arrow-right" href="<?php the_permalink(); ?>">
-												<?php echo esc_html( starterkit_to_article_label() ); ?>
-											</a>
-										</div>
-									</div>
-								</article>
-								<?php
+								get_template_part(
+									'template-parts/teaser-cards/news-teaser-card',
+									null,
+									array(
+										'class' => 'swiper-slide',
+									)
+								);
 							endwhile;
 							?>
 								<article class="swiper-slide post-item news-slider-slide--cta">

@@ -21,7 +21,7 @@
                                 </div>
                             <?php endif; ?>
 
-                            <div class="footer-legal small">
+                            <div class="footer-legal mt-3">
                                 <?php
                                 wp_nav_menu(
                                     array(

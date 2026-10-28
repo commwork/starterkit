@@ -28,7 +28,7 @@
                     display: flex;
                     flex-direction: row;
                     gap: var(--spacing-xxs);
-                    font-size: $font-size-h5;
+                    // font-size: $font-size-base;
 
                     &::before {
                         content: '';
@@ -76,8 +76,7 @@
                         background-color: $primary;
                         border-radius: var(--radius-s);
                         padding: 0.15rem 0.65rem;
-                        font-size: 0.875rem;
-                        font-weight: 500;
+                        font-size: $font-size-small;
                         color: $white;
                     }
 
