@@ -1,0 +1,192 @@
+{
+    "key": "group_69a1651fca2e4",
+    "title": "20 - CLONE - Module-Header",
+    "fields": [
+        {
+            "key": "field_69a1651f7b349",
+            "label": "Einleitung",
+            "name": "header",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "Die Einleitung enthält Dachzeile, Überschrift und Intro-Text. Mit ihr wird ein neuer Inhaltsbereich eingeleitet.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_69a1653a7b34a",
+                    "label": "Überschrift (H2)",
+                    "name": "titel",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "rows": 2,
+                    "placeholder": "",
+                    "new_lines": "br"
+                },
+                {
+                    "key": "field_69a1654a7b34b",
+                    "label": "Dachzeile (Sub-Headline)",
+                    "name": "subheadline",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "rows": 2,
+                    "placeholder": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_69a1672be6769",
+                    "label": "Intro-Text",
+                    "name": "intro",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "Der Intro-Text fasst den folgenden Inhalt kurz zusammen. Er wird auf der Website etwas größer dargestellt als der Standard-Text.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "allow_in_bindings": 0,
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_6a3d19606b33c",
+                    "label": "Weitere Optionen: Buttons, ID ...",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "accordion",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "open": 0,
+                    "multi_expand": 0,
+                    "endpoint": 0
+                },
+                {
+                    "key": "field_69bc197a4e167",
+                    "label": "Buttons",
+                    "name": "buttons",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "Button(s) unter der Einleitung.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "table",
+                    "pagination": 0,
+                    "min": 0,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Button hinzufügen",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_69bc19884e168",
+                            "label": "URL",
+                            "name": "url",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "allow_in_bindings": 0,
+                            "parent_repeater": "field_69bc197a4e167"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_6a3e54a30548d",
+                    "label": "ID (für Sprung-Links)",
+                    "name": "id_for_jump_links",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Beispiel für Sprung-Link: https:\/\/meineseite.de#info",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "ohne \"#\"",
+                    "prepend": "#",
+                    "append": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 10,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1793178132
+}

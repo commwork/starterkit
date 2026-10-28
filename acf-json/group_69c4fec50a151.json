@@ -1,0 +1,56 @@
+{
+    "key": "group_69c4fec50a151",
+    "title": "Zusammenfassung des Inhalts",
+    "fields": [
+        {
+            "key": "field_69c4fec56930c",
+            "label": "Zusammenfassung",
+            "name": "custom_excerpt",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Dieser Text sollte knapp zusammenfassen worum es auf dieser Seite geht. Max. 500 zeichen.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": 500,
+            "allow_in_bindings": 0,
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1783431938
+}

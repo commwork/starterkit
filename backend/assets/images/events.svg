@@ -1,0 +1,20 @@
+<svg width="307" height="180" viewBox="0 0 307 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1.5" y="1.5" width="304" height="177" rx="10.5" stroke="#222222" stroke-width="3"/>
+<rect x="15" y="15" width="181" height="36" rx="8" fill="#222222"/>
+<rect opacity="0.5" x="206" y="15" width="86" height="36" rx="8" fill="#B3B3B3"/>
+<rect x="16" y="68" width="83.6667" height="96" rx="7" stroke="#222222" stroke-width="2"/>
+<path d="M53.8334 106V110" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M61.8334 106V110" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M64.8334 108H50.8334C49.7288 108 48.8334 108.895 48.8334 110V124C48.8334 125.105 49.7288 126 50.8334 126H64.8334C65.9379 126 66.8334 125.105 66.8334 124V110C66.8334 108.895 65.9379 108 64.8334 108Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M48.8334 114H66.8334" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="111.667" y="68" width="83.6667" height="96" rx="7" stroke="#222222" stroke-width="2"/>
+<path d="M149.5 106V110" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M157.5 106V110" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M160.5 108H146.5C145.395 108 144.5 108.895 144.5 110V124C144.5 125.105 145.395 126 146.5 126H160.5C161.605 126 162.5 125.105 162.5 124V110C162.5 108.895 161.605 108 160.5 108Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M144.5 114H162.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="207.333" y="68" width="83.6667" height="96" rx="7" stroke="#222222" stroke-width="2"/>
+<path d="M245.167 106V110" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M253.167 106V110" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M256.167 108H242.167C241.062 108 240.167 108.895 240.167 110V124C240.167 125.105 241.062 126 242.167 126H256.167C257.271 126 258.167 125.105 258.167 124V110C258.167 108.895 257.271 108 256.167 108Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M240.167 114H258.167" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

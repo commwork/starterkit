@@ -1,0 +1,11 @@
+@use "1-vars" as *;
+@use "2-mixins" as *;
+@use "3-typography" as *;
+
+.error404 {
+    background-image: url("assets/images/404.svg");
+    background-size: 90vw;
+    background-position: top 30vh left 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

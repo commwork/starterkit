@@ -1,0 +1,42 @@
+@use "1-vars" as *;
+@use "3-typography" as *;
+
+.module-benefits {
+    .benefits-item {
+        .box {
+            background-color: $primary;
+            border-radius: var(--radius-standard);
+            color: $white;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .benefits-box-header {
+                .benefits-icon {
+                    width: 40px;
+                    max-width: 40px;
+                    height: auto;
+                    object-fit: contain;
+                    object-position: left center;
+                    margin-left: -5px;
+                    filter: brightness(0) invert(1);
+                }
+            }
+
+            .benefits-box-content {
+                .benefits-title {
+                    color: $white;
+
+                    + .benefits-text {
+                        margin-top: var(--spacing-xs);
+                    }
+                }
+
+                .benefits-text {
+                    color: $white;
+                }
+            }
+        }
+    }
+}

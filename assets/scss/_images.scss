@@ -1,0 +1,7 @@
+@use "1-vars" as *;
+@use "3-typography" as *;
+
+.image-caption {
+    font-size: $font-size-small;
+    padding-top: var(--spacing-s);
+}

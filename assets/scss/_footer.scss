@@ -1,0 +1,79 @@
+@use "1-vars" as *;
+@use "2-mixins" as *;
+
+.site-footer {
+    margin-bottom: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    > .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+
+        > .row {
+            > .col-12 {
+                .col-inner {
+                    // border-top: 2px solid $primary;
+                    // padding-bottom: var(--spacing-xl);
+                    padding: var(--spacing-l);
+                    padding-top: var(--spacing-xl);
+                    padding-bottom: var(--spacing-xl);
+                    background-color: $grey;
+                    border-radius: var(--radius-xl);
+                    margin-bottom: var(--spacing-m);                                
+                }
+            }
+        }
+    }
+
+    .footer-legal {
+        .footer-legal-nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            gap: var(--spacing-m);
+
+            .footer-legal-menu {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-end;
+                gap: var(--spacing-m);
+
+                li {
+                    a {
+                        text-decoration: none;
+                    }
+
+                    @media (hover: hover) {
+                        &:hover {
+                            a {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-social {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        gap: var(--spacing-m);
+        margin-top: auto;
+
+        a {
+            img {
+                width: 36px;
+                height: 36px;
+            }
+        }
+    }
+}

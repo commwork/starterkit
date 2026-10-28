@@ -1,0 +1,82 @@
+/* <div class="row module-benefits module-content benefits-list g-3">
+	<div class="col-12 col-md-4 col-xl-4 benefits-item">
+		<div class="box box--s">
+			<div class="benefits-box-header">
+				<img src="//localhost:3000/awo-vorpommern-live/wp-content/uploads/2026/06/heart.svg" alt=""
+					class="benefits-icon" loading="lazy" decoding="async">
+			</div>
+
+			<div class="benefits-box-content">
+				<div class="h3 benefits-title">
+					Aufrichtig </div>
+
+				<div class="benefits-text txt">
+					... vertrauend<br>
+					... sinngebend<br>
+					... authentisch </div>
+			</div>
+		</div>
+	</div>
+	<div class="col-12 col-md-4 col-xl-4 benefits-item">
+		<div class="box box--s">
+			<div class="benefits-box-header">
+				<img src="//localhost:3000/awo-vorpommern-live/wp-content/uploads/2026/06/heart-handshake.svg" alt=""
+					class="benefits-icon" loading="lazy" decoding="async">
+			</div>
+
+			<div class="benefits-box-content">
+				<div class="h3 benefits-title">
+					Wertschätzend </div>
+
+				<div class="benefits-text txt">
+					... hilfreich<br>
+					... achtsam<br>
+					... leidenschaftlich </div>
+			</div>
+		</div>
+	</div>
+	<div class="col-12 col-md-4 col-xl-4 benefits-item">
+		<div class="box box--s">
+			<div class="benefits-box-header">
+				<img src="//localhost:3000/awo-vorpommern-live/wp-content/uploads/2026/06/scan-heart.svg" alt=""
+					class="benefits-icon" loading="lazy" decoding="async">
+			</div>
+
+			<div class="benefits-box-content">
+				<div class="h3 benefits-title">
+					Orientierend </div>
+
+				<div class="benefits-text txt">
+					... vielseitig<br>
+					... durchsetzungsstark<br>
+					... kompetent </div>
+			</div>
+		</div>
+	</div>
+</div> */
+
+/* @media (max-width: 920px) {
+	#mehr-awo .module-benefits .col-12.col-md-6.col-xxl-4.benefits-item {
+		flex: 0 0 auto;
+		width: 100%;
+		max-width: 100%;
+	}
+} */
+
+@media (min-width: 920px) {
+	#mehr-awo .module-benefits .col-12.col-md-6.col-xxl-4.benefits-item {
+		flex: 0 0 auto;
+		width: 33.33333333%;
+		max-width: 33.33333333%;
+	}
+}
+
+#mehr-awo .module-benefits .benefits-title::first-letter {
+	font-weight: 700;
+	font-size: 4rem;
+	letter-spacing: 0.05em;
+}
+
+#mehr-awo .module-benefits .col-12.col-md-6.col-xxl-4.benefits-item .benefits-title {
+	white-space: nowrap;
+}

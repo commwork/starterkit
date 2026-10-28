@@ -1,0 +1,120 @@
+<!-- Form -->
+<div class="row g-4">
+    <div class="col-12">
+        <div class="row g-3">
+            <div class="col-12">
+                <h3>Ihre Kontaktdaten</h3>
+            </div>
+
+            <div class="col-12 col-lg-6">
+                <label>Ihr Name
+                    [text* your-name autocomplete:name] </label>
+            </div>
+
+            <div class="col-12 col-lg-6">
+                <label> Ihre E-Mail-Adresse
+                    [email* your-email autocomplete:email] </label>
+            </div>
+
+            <div class="col-12">
+                <label> Ihre Telefonnummer (optional)
+                    [tel your-phone maxlength:40] </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <h3>Nachricht an uns</h3>
+    </div>
+
+    <div class="col-12">
+        <label>Ihre Nachricht
+            [textarea* your-message] </label>
+    </div>
+
+    <div class="col-12">
+        [acceptance acceptance-684] Ich stimme zu, dass meine Angaben aus dieser Nachricht zur Bearbeitung meiner
+        Meldung erhoben und verarbeitet werden. Die Daten werden nach abgeschlossener Bearbeitung Ihrer Anfrage
+        gelöscht. Hinweis: Sie können Ihre Einwilligung jederzeit für die Zukunft per E-Mail an info@awo-vorpommern.de
+        widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer <a href="/datenschutzerklaerung/">Datenschutzerklärung</a>.
+        [/acceptance]
+    </div>
+
+    <div class="col-12">
+        <div class="submit-wrapper">
+            [submit "Senden"]
+        </div>
+    </div>
+</div>
+
+<!--E-Mail content-->
+<!--
+=== CF7 > Mail > Betreff ===
+Neue Nachricht (Frauenschutzhaus): [your-name]
+
+=== CF7 > Mail > Von ===
+[_site_admin_email]
+
+=== CF7 > Mail > An ===
+Fsh-rd@awo-vorpommern.de
+
+=== CF7 > Mail > Reply-To ===
+[your-email]
+
+=== CF7 > Mail > Nachricht ===
+-->
+
+Neue Nachricht über das Kontaktformular Frauenschutzhaus auf [_site_title] ([_site_url])
+
+Ihre Kontaktdaten
+-----------------
+Name: [your-name]
+E-Mail: [your-email]
+Telefon: [your-phone]
+
+Nachricht
+---------
+[your-message]
+
+Einwilligung Datenschutz: [acceptance-684]
+
+--
+Diese E-Mail wurde automatisch über das Kontaktformular gesendet.
+Absender-IP: [_remote_ip]
+Datum/Uhrzeit: [_date] [_time]
+
+<!--E-Mail content (Mail 2 – Bestätigung an Absender/in)-->
+<!--
+=== CF7 > Mail (2) aktivieren: Ja ===
+
+=== CF7 > Mail (2) > Betreff ===
+Ihre Nachricht an das Frauenschutzhaus – [_site_title]
+
+=== CF7 > Mail (2) > Von ===
+[_site_title] <[_site_admin_email]>
+
+=== CF7 > Mail (2) > An ===
+[your-email]
+
+=== CF7 > Mail (2) > Nachricht ===
+-->
+
+Guten Tag [your-name],
+
+vielen Dank für Ihre Nachricht. Wir haben Ihre Anfrage erhalten und werden uns schnellstmöglich bei Ihnen melden.
+
+Zur Kontrolle haben wir Ihre Angaben unten noch einmal aufgeführt:
+
+Name: [your-name]
+E-Mail: [your-email]
+Telefon: [your-phone]
+
+Ihre Nachricht:
+[your-message]
+
+Mit freundlichen Grüßen
+Ihr Team des Frauenschutzhauses
+[_site_title]
+
+--
+[_site_url]

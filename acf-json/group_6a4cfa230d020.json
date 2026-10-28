@@ -1,0 +1,215 @@
+{
+    "key": "group_6a4cfa230d020",
+    "title": "Startseite Header\/Intro",
+    "fields": [
+        {
+            "key": "field_6a4cfa2341e59",
+            "label": "Header Inhalt",
+            "name": "header_content_home",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "Inhalt des speziellen Headers auf der Startseite (über dem Seitenbild).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6a4cfa280a101",
+                    "label": "Dachzeile (Sub-Headline)",
+                    "name": "subheadline",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "Eine kurze \"Unter-Überschrift\" (engl. \"Subheadline\") die über der Überschrift steht.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "rows": 2,
+                    "placeholder": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_6a4cfa280a102",
+                    "label": "Überschrift",
+                    "name": "titel",
+                    "aria-label": "",
+                    "type": "flexible_content",
+                    "instructions": "Hier kann die Überschrift mit 2 verschiedenen Schriftstärken erstellt werden. Die Schriftstärken können beliebig gemischt werden.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layouts": {
+                        "layout_6a4cfa280b101": {
+                            "key": "layout_6a4cfa280b101",
+                            "name": "regular",
+                            "label": "Normal",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6a4cfa280b102",
+                                    "label": "Text (normal)",
+                                    "name": "text",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        "layout_6a4cfa280b103": {
+                            "key": "layout_6a4cfa280b103",
+                            "name": "strong",
+                            "label": "Fett",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6a4cfa280b104",
+                                    "label": "Text (fett)",
+                                    "name": "text",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        "layout_6a4cfa280b105": {
+                            "key": "layout_6a4cfa280b105",
+                            "name": "line_break",
+                            "label": "Umbruch",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6a4cfa280b106",
+                                    "label": "Info",
+                                    "name": "",
+                                    "aria-label": "",
+                                    "type": "message",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "Fügt einen Umbruch hinzu (nur auf Desktop).",
+                                    "new_lines": "",
+                                    "esc_html": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        }
+                    },
+                    "min": "",
+                    "max": "",
+                    "button_label": "Text der Überschrift hinzufügen"
+                },
+                {
+                    "key": "field_6a4cfa280a103",
+                    "label": "Intro-Text",
+                    "name": "intro",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "Der Intro-Text fasst den folgenden Inhalt kurz zusammen. Er wird auf der Website etwas größer dargestellt als der Standard-Text.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "allow_in_bindings": 0,
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
+                    "key": "field_6a4cfa280a104",
+                    "label": "Link",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "Link unter dem Intro-Text (z. B. Kontakt-Button).",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "allow_in_bindings": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "front_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1793110532
+}

@@ -1,0 +1,400 @@
+@use "1-vars" as *;
+@use "2-mixins" as *;
+@use "3-typography" as *;
+
+// .chronicle-module {
+//     &.section--bg-grey {
+//         background-color: $grey;
+//         margin-left: 1rem;
+//         margin-right: 1rem;
+//         width: calc(100% - 2rem);
+//         border-radius: var(--radius-xl);
+
+//         .module-content .post-item .post-item-content {
+//             border: 0;
+//             background-color: $white;
+//         }
+//     }
+// }
+
+:root {
+    --dock-height: 80px;
+}
+
+.chronicle-module {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-m);
+
+    > .container {
+        position: relative;
+    }
+
+    .chronicle-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 240px;
+        padding-top: var(--spacing-xxl);
+        padding-bottom: var(--spacing-xl);
+        margin-top: var(--spacing-xl);
+        margin-bottom: var(--spacing-xl);
+
+        @include sm-down {
+            padding-left: 40px;
+        }
+    }
+
+    /* Vertical timeline line (grey track) */
+    .chronicle-line {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        transform: translateX(-50%);
+        background: $grey;
+        z-index: 0;
+        border-radius: 2px;
+
+        @include sm-down {
+            // display: none;
+            left: 0;
+        }
+    }
+
+    /* Red fill – height set by JS (--chronicle-fill-height) */
+    .chronicle-line-fill {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: var(--chronicle-fill-height, 0%);
+        max-height: 100%;
+        background: $primary;
+        border-radius: 2px;
+        transition: height 0.15s ease-out;
+
+        @include sm-down {
+            // display: none;        
+        }
+    }
+
+    .chronicle-year {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: var(--spacing-s);
+        z-index: 1;
+        // Full row width so 50% flex columns stay balanced when the image slot is empty.
+        width: 100%;
+
+        @include sm-down {
+            flex-direction: column;
+        }
+
+        .chronicle-year-content,
+        .chronicle-year-image {
+            transition: opacity 0.5s ease;
+        }
+
+        .chronicle-year-content {
+            .chronicle-events {
+                .chronicle-event {
+                    .chronicle-event-date {
+                        color: $primary;
+
+                        .chronicle-event-year {
+                            font-size: 1.2rem;
+                            font-weight: 500;
+                            color: $black;
+                            opacity: .55;
+                            margin-left: .3em;
+                        }
+                    }
+
+                    .chronicle-event-text {
+                        @include md-up {
+                            max-width: 400px;
+                        }
+                    }
+
+                    + .chronicle-event {
+                        .chronicle-event-date {
+                            padding-top: 1em;
+                            width: 100%;
+                            border-top: none;
+                            background-image: linear-gradient(to right, $grey-dark 50%, transparent 50%);
+                            background-size: 16px 1px;
+                            background-repeat: repeat-x;
+                            background-position: top left;
+
+                            @include md-up {
+                                max-width: 400px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &:not(.is-reached) {
+            .chronicle-year-content,
+            .chronicle-year-image {
+                opacity: .4;
+            }
+
+            .chronicle-year-content {
+                position: relative;
+
+                .chronicle-year-title {
+                    color: $black;
+                    opacity: .55;
+                }
+            }
+        }
+
+        &.even {
+            flex-direction: row-reverse;
+
+            @include sm-down {
+                flex-direction: column;
+            }
+        }
+
+        &.odd {
+            .chronicle-year-content {
+                text-align: right;
+
+                @include sm-down {
+                    text-align: left;
+                }
+
+                .chronicle-events {
+                    .chronicle-event {
+                        align-items: flex-end;
+                        width: 100%;
+
+                        @include sm-down {
+                            align-items: flex-start;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* Circle on the line – red when fill reaches it */
+    .chronicle-year-marker {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -50%);
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 3px solid $grey;
+        background: $white;
+        flex-shrink: 0;
+        transition: transform 0.5s ease;
+        margin-top: -40px;
+
+        @include sm-down {
+            left: -40px;
+        }
+    }
+
+    .chronicle-year.is-reached .chronicle-year-marker {
+        border: 2px solid $primary;
+        transform: translate(-50%, -50%) scale(2);
+    }
+
+    .chronicle-year-content {
+        flex: 0 0 calc(50% - var(--spacing-xxl) / 2);
+
+        .chronicle-year-title {
+            // font-family: "Gravitas One", serif;
+            // font-weight: 400;
+            // font-style: normal;
+            font-size: 12rem;
+            font-weight: 900;
+            color: $primary;
+            line-height: .7;
+            display: block;
+            margin-bottom: .3em;
+
+            @include sm-down {
+                margin-top: -.35em;
+            }
+
+            @include xl-down {
+                font-size: 8rem;
+            }
+
+            @include lg-down {
+                font-size: 6rem;
+            }
+
+            @include md-down {
+                font-size: 4rem;
+            }
+
+            @include sm-down {
+                font-size: 6rem;
+            }
+        }
+
+        .chronicle-events {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: var(--spacing-m);
+
+            .chronicle-event {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: .3em;
+            }
+        }
+    }
+
+    .chronicle-year-image {
+        flex: 0 0 calc(50% - var(--spacing-xxl) / 2);
+        min-width: 0;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block !important;
+            object-fit: cover;
+            border-radius: var(--radius-m);
+            filter: grayscale(100%);
+        }
+    }
+}
+
+// Anchor for the year title (jump to)
+.year-anchor {
+    display: block;
+    position: relative;
+    top: -200px;
+    bottom: auto;
+    height: 20px;
+    z-index: 500;
+}
+
+.chronicle-navigation {
+    position: fixed;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: -200px;
+    width: 100%;
+    height: var(--dock-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: bottom 0.25s ease;
+
+    &.is-visible {
+        bottom: var(--spacing-m);
+    }
+
+    .chronicle-navigation-list-wrapper {
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+        height: var(--dock-height);
+        border-radius: var(--radius-m);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        background-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.125);
+        
+        // Max width for the navigation list wrapper
+        max-width: 650px;
+
+        @include sm-down {
+            max-width: 400px;
+        }
+
+        @include xs-down {
+            max-width: 90%;
+        }
+
+        // Scroll behavior
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        height: var(--dock-height);
+        min-height: var(--dock-height);
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        ul.chronicle-navigation-list {
+            width: max-content;
+            padding-left: 15px;
+            padding-right: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            height: var(--dock-height);
+            min-height: var(--dock-height);
+            
+            .chronicle-navigation-item {
+                height: var(--dock-height);
+                display: flex;
+                align-items: center;
+                
+
+                .chronicle-navigation-link {
+                    display: block;
+                    font-weight: 500;
+                    color: $black;
+                    text-decoration: none;
+                    padding: var(--spacing-s) var(--spacing-s);
+                    transition: color 0.25s ease, font-size 0.25s ease;
+
+                    @media (hover: hover) {
+                        &:hover {
+                            color: $primary;
+                        }
+                    }
+                }
+
+                &.active .chronicle-navigation-link {
+                    color: $primary;
+                    font-size: 1.8rem;
+                    font-weight: 900;
+                    line-height: 1;
+                    max-height: var(--dock-height);
+                    position: relative;
+                    margin-top: -.25em;
+                }
+            }
+        }
+    }
+}
+
+.chronicle-footer {
+    text-align: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .read-more-buttons {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

@@ -1,0 +1,57 @@
+@use "../../assets/scss/1-vars" as *;
+@use "../../assets/scss/2-mixins" as *;
+
+/* -------------------------------------------------------------------------
+ * Single post: ACF `modules_news` only (not shared with page modules)
+ * ------------------------------------------------------------------------- */
+
+.single-news-modules {
+    .single-news-module-content + .single-news-module-content {
+        margin-top: var(--spacing-m);
+    }
+}
+
+/* Image */
+.single-news-image__container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-standard);
+}
+
+.single-news-image__caption {
+    margin-top: var(--spacing-xs);
+    font-size: 0.9em;
+}
+
+/* Native <details>/<summary> (Bootstrap Reboot-style summary affordance) */
+.single-news-image__details {
+    padding: var(--spacing-s) var(--spacing-m);
+    background-color: $grey;
+    border-radius: var(--radius-m);
+
+    .single-news-image__summary {
+        cursor: pointer;
+        font-weight: 500;
+        list-style-position: inside;
+
+        &:focus-visible {
+            outline: 2px solid $primary;
+            outline-offset: 2px;
+            border-radius: var(--radius-s);
+        }
+    }
+}
+
+.single-news-image__summary {
+    cursor: pointer;
+    font-weight: 500;
+    list-style-position: outside;
+}
+
+.single-news-image__description {
+    margin-top: var(--spacing-xs);
+    padding-left: 0.1em;
+}
+
+/* Slider: uses shared `.slider-module` styles from template-parts/modules/slider/_module-slider.scss */

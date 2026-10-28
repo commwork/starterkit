@@ -1,0 +1,425 @@
+@use "1-vars" as *;
+@use "2-mixins" as *;
+@use "3-typography" as *;
+
+// Single Jobs
+.single-jobs {
+    .single-job {
+        article {
+            // Single Job Article
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .entry-header {
+                .section-header {
+                    .entry-header-back {
+                        margin-bottom: var(--spacing-l);
+                    }
+                }
+            }
+
+            .single-job__intro {
+                > div {
+                    @include lg-down {
+                        &:last-child {
+                            order: 1;
+                        }
+    
+                        &:first-child {
+                            order: 2;
+                        }
+                    }
+                    
+                    @include lg-up {
+                        &:last-child {
+                            order: 2;
+                        }
+    
+                        &:first-child {
+                            order: 1;
+                        }
+                    }
+                }
+                .job-meta-info {
+                    background-color: $primary;
+                    border-radius: var(--radius-m);
+                    padding: var(--spacing-l);
+                    color: $white;
+
+                    .icon-arrow-right {
+                        width: 60px;
+                        height: 60px;
+                        position: relative;
+                        margin-top: -12px;
+                        margin-left: -6px;
+                        margin-bottom: var(--spacing-s);
+                    }
+
+                    .job-meta-list {
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                        text-align: right;
+
+                        li {
+                            + li {
+                                margin-top: var(--spacing-s);
+                            }
+                        }
+                    }
+                }
+
+                .header-hero {
+                    > * {
+                        display: none;
+                    }
+
+                    > p {
+                        &:first-child {
+                            display: block;
+
+                            img {
+                                border-radius: var(--radius-m);
+                                width: 100%;
+                                height: 500px; // Fixed height required for Media Focus Point object-position to take effect
+                                object-fit: cover;
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        img:not([src$=".svg"]) {
+            border-radius: var(--radius-m);
+            width: 100%;
+            min-width: 100%;
+            height: auto;
+            margin-bottom: var(--spacing-s);
+        }
+    }
+
+    .container-content {
+        margin-top: var(--spacing-l);
+
+        .entry-content {
+            ul {
+                * {
+                    margin: 0 !important;
+                    padding: 0 !important;
+                }
+
+                li {
+                    padding-left: 20px !important;
+                }
+
+                list-style-type: none !important;
+            }
+
+            > p {
+                &:first-child {
+                    display: none;
+                }
+            }
+
+            p, ul, ol {
+                margin-bottom: var(--spacing-m) !important;
+                width: 100% !important;
+                font-family: $font !important;
+                font-size: $font-size-p !important;
+	            line-height: 1.7 !important;
+            }
+
+            span {
+                font-family: $font !important;
+            }
+
+            img {
+                margin-bottom: var(--spacing-s) !important;
+                width: 100% !important;
+                font-size: inherit !important;
+	            line-height: inherit !important;
+            }
+
+            h2,
+            h2 > span {
+                font-size: $font-size-h3 !important;
+                margin-bottom: var(--spacing-m) !important;
+                width: 100%;
+                font-family: $font !important;
+            }
+
+            > h2 {
+                margin-top: var(--spacing-l) !important;
+            }
+
+            span {
+                font-family: $font !important;
+                font-size: $font-size-p !important;
+	            line-height: 1.7 !important;
+            }
+
+            // Benefits box needs to be in a DIV
+            > div {
+                background-color: #f3f3f3;
+                border-radius: var(--radius-standard);
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: var(--spacing-s);
+                padding: var(--spacing-m);
+                overflow: hidden;
+                margin-top: calc(var(--spacing-l) + 1em) !important;
+                margin-bottom: var(--spacing-l);
+
+                > h2 {
+                    margin-bottom: .4em !important;
+                }
+
+                > ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    margin-bottom: 0 !important;
+                    color: #191919;
+                    display: flex;
+                    flex-direction: column;
+                    gap: var(--spacing-s);
+
+                    > li {
+                        background-image: url("assets/images/icons/24/circle-check.svg");
+                        background-repeat: no-repeat;
+                        background-position: left top .05em;
+                        background-size: 1.5em;
+                        padding-left: 2.2em !important;
+                        line-height: 1.5 !important;
+
+                        &::before {
+                            content: none;
+                        }
+                    }
+                }
+            }
+
+            > div,
+            > h2,
+            > ul {
+                margin-top: 4rem !important;
+            }
+
+            > div + ul,
+            > h2 + ul {
+                margin-top: 0 !important;
+            }
+
+            > h2 {
+                &:first-of-type {
+                    margin-top: 0 !important;
+                }
+            }
+        }
+    }
+
+    .entry-footer {
+        margin-top: var(--spacing-l);
+
+        .entry-footer-apply {
+            text-align: right;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: var(--spacing-m);
+        }
+    }
+}
+
+// Jobs Teasers (News Archive)
+.jobs-teasers {
+    .module-content {
+        .post-item {          
+            .post-item-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                border: 2px solid $primary;
+                height: 100%;
+
+                @media (hover: hover) {
+                    &:hover {
+                        .btn {                       
+                            color: $white;
+                            background-color: $primary;
+                            border: 2px solid $primary;
+                            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3E%3Cg stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' clip-path='url(%23a)'%3E%3Cpath d='M1.765 10h16.47M10 1.25 18.235 10 10 18.75'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23e2001a' d='M0 0h20v20H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");                  
+                        }
+                    }
+                }
+
+                &:focus-visible {
+                    .btn {                       
+                        color: $white;
+                        background-color: $primary;
+                        border: 2px solid $primary;
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3E%3Cg stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' clip-path='url(%23a)'%3E%3Cpath d='M1.765 10h16.47M10 1.25 18.235 10 10 18.75'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23e2001a' d='M0 0h20v20H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");                  
+                    }
+                }
+
+                .post-item-image {
+                    overflow: hidden;
+                    border-radius: var(--radius-m);
+                    margin: 0;
+                    width: 100%;
+        
+                    img {
+                        width: 100%;
+                        height: 280px; // Fixed height required for Media Focus Point object-position to take effect
+                        object-fit: cover;
+                        display: block;
+
+                        @include md-up {
+                            height: 200px;
+                        }
+
+                        @include lg-up {
+                            height: 240px;
+                        }
+
+                        @include xl-up {
+                            height: 290px;
+                        }
+
+                        @include xxl-up {
+                            height: 240px;
+                        }
+
+                        @media (min-width: 1800px) {
+                            height: 300px;
+                        }
+
+                        @include xxxl-up {
+                            height: 330px;
+                        }
+                    }
+                }
+
+                > .stack {
+                    flex: 1 1 auto;
+
+                    .category {
+                        background-image: url("assets/images/icons/24/tag.svg");
+                        background-repeat: no-repeat;
+                        background-position: left center;
+                        background-size: 1em;
+                        padding-left: 1.5em;
+                    }
+
+                    .btn {
+                        margin-top: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Pagination (News Archive)
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: var(--spacing-s);
+    margin-top: var(--spacing-l);
+
+    .page-numbers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--spacing-s);
+
+        li {
+            list-style: none;
+
+            a, span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-width: 40px;
+                height: 40px;
+                max-height: 40px;
+                font-size: $font-size-h5;
+                border-radius: 50%;
+                border: 2px solid $primary;
+                color: $primary;
+                text-decoration: none;
+            }
+            
+            span {
+                color: $white;
+                border: 2px solid $black;
+                background-color: $black;
+            }
+
+            a {
+                &.next {
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='%23e0001b' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' class='lucide lucide-arrow-right-icon lucide-arrow-right' viewBox='0 0 24 24'%3E%3Cpath d='M5 12h14M12 5l7 7-7 7'/%3E%3C/svg%3E");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 50%;
+                    text-indent: -9999px;
+                }
+
+                &.prev {
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='%23e0001b' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' class='lucide lucide-arrow-right-icon lucide-arrow-right' viewBox='0 0 24 24'%3E%3Cpath d='M5 12h14M12 5l7 7-7 7'/%3E%3C/svg%3E");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 50%;
+                    text-indent: -9999px;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+}
+
+// Sidebar Category Tags
+.sidebar-category-tags {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--spacing-m);
+
+    .sidebar-category {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: var(--spacing-s);
+
+        .sidebar-categories-list {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: var(--spacing-s);
+        }
+    }
+
+    .sidebar-tags {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: var(--spacing-s);
+
+        .sidebar-tags-list {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: var(--spacing-s);
+        }
+    }
+}

@@ -1,0 +1,12 @@
+<svg width="307" height="180" viewBox="0 0 307 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1.5" y="1.5" width="304" height="177" rx="10.5" stroke="#222222" stroke-width="3"/>
+<rect x="15" y="15" width="181" height="36" rx="8" fill="#222222"/>
+<rect opacity="0.5" x="206" y="15" width="86" height="36" rx="8" fill="#B3B3B3"/>
+<rect x="16" y="68" width="72" height="96" rx="7" stroke="#222222" stroke-width="2"/>
+<rect x="100" y="68" width="72" height="96" rx="7" stroke="#222222" stroke-width="2"/>
+<rect x="184" y="68" width="72" height="96" rx="7" stroke="#222222" stroke-width="2"/>
+<mask id="path-7-inside-1_2719_871" fill="white">
+<path d="M307 165H275C270.582 165 267 161.418 267 157V75C267 70.5817 270.582 67 275 67H307V165Z"/>
+</mask>
+<path d="M307 165V167H309V165H307ZM267 75L265 75V75H267ZM275 67V65V65V67ZM307 67H309V65H307V67ZM307 165V163H275V165V167H307V165ZM275 165V163C271.686 163 269 160.314 269 157H267H265C265 162.523 269.477 167 275 167V165ZM267 157H269V75H267H265V157H267ZM267 75L269 75C269 71.6863 271.686 69 275 69V67V65C269.477 65 265 69.4772 265 75L267 75ZM275 67V69H307V67V65H275V67ZM307 67H305V165H307H309V67H307Z" fill="#222222" mask="url(#path-7-inside-1_2719_871)"/>
+</svg>

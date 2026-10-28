@@ -1,0 +1,81 @@
+@use "1-vars" as *;
+@use "2-mixins" as *;
+@use "3-typography" as *;
+
+.module-process {
+    .process-item {
+        &.is-in-view .process-icon .process-clock__hand {
+            animation: process-clock-hand-tick 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+
+            &.process-clock__hand--hour {
+                animation-delay: 0.25s;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            &.is-in-view .process-icon .process-clock__hand {
+                animation: none;
+                transform: rotate(var(--hand-angle));
+            }
+        }
+
+        .box {
+            background-color: $primary;
+            border-radius: var(--radius-standard);
+            color: $white;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: var(--spacing-m);
+
+            .process-icon {
+                max-width: 40px;
+                height: auto;
+                flex-shrink: 0;
+
+                @include md-down {
+                    max-width: 40px;
+                }
+
+                .process-clock {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+
+                    &__hand {
+                        transform-box: view-box;
+                        transform-origin: 12px 12px;
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+
+            .process-content {
+                flex: 1;
+                display: flex;
+                gap: var(--spacing-xs);
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                .process-title {
+                    color: $white;
+                    margin-top: .4rem;
+                }
+    
+                .process-text {
+                    color: $white;
+                    margin-bottom: 0;
+                    margin-top: .35rem;
+                }
+            }
+        }
+    }
+}
+
+@keyframes process-clock-hand-tick {
+    to {
+        transform: rotate(var(--hand-angle));
+    }
+}

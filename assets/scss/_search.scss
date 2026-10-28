@@ -1,0 +1,158 @@
+@use "1-vars" as *;
+
+// Search Page
+.section-search {
+    .search-mask {
+        .search-form {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: flex-start;
+            gap: var(--spacing-m);
+            margin-top: var(--spacing-m);
+
+            @media screen and (max-width: 440px) {
+                flex-direction: column;
+            }
+
+            label {
+                width: 100%;
+                padding: 0;
+
+                input {
+                    height: 100%;
+                    min-height: 100%;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    background: transparent;
+                    letter-spacing: 0.32px;
+                    color: $black;
+                    padding: var(--spacing-s);
+                    border: 2px solid $primary;
+                    border-radius: var(--radius-s);
+
+                    &:focus-visible {
+                        outline: 2px solid $accessibility-focus-ring-color;
+                        outline-offset: 2px;
+                        border-radius: 4px;
+                        transition: none;
+                    }
+                }
+            }
+
+            .search-submit {
+                width: fit-content;
+                padding: 10px 20px;
+                border-radius: var(--radius-s);
+                border: 2px solid $primary;
+                background: $primary;
+                color: $white;
+                font-weight: 500;
+                letter-spacing: 0.32px;
+                cursor: pointer;
+                // transition: all 0.25s ease-in;
+
+                &:focus-visible {
+                    outline: 2px solid $accessibility-focus-ring-color;
+                    outline-offset: 2px;
+                    border-radius: 4px;
+                    transition: none;
+                }
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        cursor: pointer;
+                        background: $white;
+                        color: $primary !important;
+                        border: 2px solid $primary;
+                        transition: all 0.25s ease-in;
+                    }
+                }
+            }
+        }
+    }
+
+    .search-results-header {      
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+
+        .search-title {   
+            span {
+                font-style: italic;
+            }
+        }
+    }
+
+    .search-results-entries {
+        margin-top: 1rem;
+    
+        h3 {
+            + h3 {
+                margin-top: 1rem;
+                padding-top: 1rem;
+                border-top: 1px solid $primary;
+            }
+        }
+    }
+    
+    .search-results-none {
+        display: block;
+        margin-top: 2rem;
+    }
+
+    .section-category-tags {
+        margin-top: var(--spacing-l);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: var(--spacing-m);
+
+        .section-category {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: var(--spacing-s);
+        }
+        .section-tags {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: var(--spacing-s);
+        }
+    }
+}
+
+.section-sidebar {
+    .sidebar-category-tags {
+        margin-top: var(--spacing-l);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: var(--spacing-m);
+    
+        .sidebar-category-group {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: var(--spacing-s);
+        }
+        
+        .sidebar-tags {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: var(--spacing-s);
+        }
+    }
+}

@@ -1,0 +1,44 @@
+@use "1-vars" as *;
+@use "2-mixins" as *;
+
+.compensation-module {
+    .compensation-module-items {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-s);
+
+        .compensation-module-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--spacing-xs);
+
+            .compensation-module-title {
+                flex: 0 1 auto;
+                min-width: 0;
+                margin-bottom: 0;
+            }
+
+            .compensation-module-divider {
+                flex: 1 1 auto;
+                min-width: 1.5rem;
+                display: flex;
+                align-items: center;
+                margin: 0 var(--spacing-s);
+
+                .compensation-module-divider-line {
+                    width: 100%;
+                    height: 1px;
+                    background-color: $grey-dark;
+                }
+            }
+
+            .compensation-module-salary {
+                flex: 0 1 auto;
+                min-width: 0;
+                margin: 0;
+            }
+        }
+    }
+}

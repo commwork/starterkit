@@ -1,0 +1,72 @@
+// Bootstrap 5 default breakpoints (same as in bootstrap-grid.min.css)
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+$breakpoint-xxxl: 2000px;
+$breakpoint-mobile-nav: 1300px;
+
+// ────────────────────────────────────────────────
+// Mobile-first responsive mixins
+// Usage examples:
+//   @include sm-up { font-size: 1.1rem; }
+//   @include lg-down { padding: 1rem; }
+// ────────────────────────────────────────────────
+@mixin xs-up  { @media (min-width: $breakpoint-xs)  { @content; } }
+@mixin sm-up  { @media (min-width: $breakpoint-sm)  { @content; } }
+@mixin md-up  { @media (min-width: $breakpoint-md)  { @content; } }
+@mixin lg-up  { @media (min-width: $breakpoint-lg)  { @content; } }
+@mixin xl-up  { @media (min-width: $breakpoint-xl)  { @content; } }
+@mixin xxl-up { @media (min-width: $breakpoint-xxl) { @content; } }
+@mixin xxxl-up { @media (min-width: $breakpoint-xxxl) { @content; } }
+@mixin mobile-nav-up { @media (min-width: $breakpoint-mobile-nav) { @content; } }
+
+// Desktop-first (max-width)
+@mixin xs-down  { @media (max-width: ($breakpoint-sm - 0.02px))  { @content; } }  // < sm
+@mixin sm-down  { @media (max-width: ($breakpoint-md - 0.02px))  { @content; } }
+@mixin md-down  { @media (max-width: ($breakpoint-lg - 0.02px))  { @content; } }
+@mixin lg-down  { @media (max-width: ($breakpoint-xl - 0.02px))  { @content; } }
+@mixin xl-down  { @media (max-width: ($breakpoint-xxl - 0.02px)) { @content; } }
+@mixin xxl-down { @media (max-width: ($breakpoint-xxxl - 0.02px)) { @content; } }
+@mixin xxxl-down { @media (max-width: ($breakpoint-xxxl - 0.02px)) { @content; } }
+@mixin mobile-nav-down { @media (max-width: ($breakpoint-mobile-nav - 0.02px)) { @content; } }
+
+// Convenience aliases
+@mixin from($bp) {
+  @if $bp == sm  { @include sm-up  { @content; } }
+  @else if $bp == md { @include md-up  { @content; } }
+  @else if $bp == lg { @include lg-up  { @content; } }
+  @else if $bp == xl { @include xl-up  { @content; } }
+  @else if $bp == mobile-nav { @include mobile-nav-up { @content; } }
+  @else { @warn "Unknown breakpoint: #{$bp}"; }
+}
+
+@mixin until($bp) {
+  @if $bp == xs  { @include xs-down  { @content; } }
+  @else if $bp == sm { @include sm-down  { @content; } }
+  @else if $bp == md { @include md-down  { @content; } }
+  @else if $bp == lg { @include lg-down  { @content; } }
+  @else if $bp == xl { @include xl-down  { @content; } }
+  @else if $bp == mobile-nav { @include mobile-nav-down { @content; } }
+  @else { @warn "Unknown breakpoint: #{$bp}"; }
+}
+
+// ────────────────────────────────────────────────
+// Visibility helpers
+// Usage: 
+//   .hide-mobile { @include sm-down { display: none; } }
+// ────────────────────────────────────────────────
+@mixin hide-from($bp) {
+  @include from($bp) {
+    display: none !important;
+  }
+}
+
+@mixin show-from($bp) {
+  display: none !important;
+  @include from($bp) {
+    display: flex !important;
+  }
+}

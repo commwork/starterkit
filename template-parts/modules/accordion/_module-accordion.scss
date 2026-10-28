@@ -1,0 +1,127 @@
+@use "1-vars" as *;
+@use "3-typography" as *;
+
+.accordion-module {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-s);
+
+	.accordion-item {
+		border: 2px solid $primary;
+		border-radius: var(--radius-m);
+		overflow: hidden;
+
+		.accordion-header {
+			margin: 0;
+		}
+
+		.accordion-button {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			width: 100%;
+			padding: var(--spacing-s) var(--spacing-m);
+			gap: var(--spacing-m);
+			text-align: left;
+			cursor: pointer;
+			border: none;
+			background-color: transparent;
+			transition: background-color 0.3s ease;
+
+			&::-webkit-details-marker {
+				display: none;
+			}
+
+			&:focus-visible {
+				outline: 2px solid $white;
+				outline-offset: 2px;
+			}
+
+			@media (hover: hover) {
+				&:hover {
+					background-color: $primary;
+					color: $white;
+
+					svg {
+						stroke: $white;
+					}
+
+					.accordion-trigger-text {
+						color: $white;
+					}
+				}
+			}
+
+			&:not(.collapsed) {
+				background-color: $primary;
+				color: $white;
+
+				svg {
+					stroke: $white;
+				}
+
+				.accordion-trigger-text {
+					color: $white;
+				}
+			}
+		}
+
+		.accordion-trigger-text {
+			font-size: $font-size-h5;
+			line-height: 1.25;
+			letter-spacing: 0.04em;
+			font-weight: 400;
+			color: $black;
+			display: block;
+			flex: 1;
+		}
+
+		.accordion-icon {
+			display: inline-flex;
+			flex-shrink: 0;
+			color: $primary;
+			margin-top: 0.1rem;
+			margin-right: -0.3rem;
+			transition: transform 260ms ease;
+
+			svg {
+				display: block;
+			}
+		}
+
+		.accordion-icon--minus {
+			display: none;
+		}
+
+		.accordion-button:not(.collapsed) .accordion-icon--plus {
+			display: none;
+		}
+
+		.accordion-button:not(.collapsed) .accordion-icon--minus {
+			display: inline-flex;
+		}
+
+		.accordion-collapse {
+			border-top: 1px solid $grey;
+		}
+
+		.accordion-body {
+			padding: var(--spacing-m) var(--spacing-m) var(--spacing-m);
+
+			p:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.collapse:not(.show) {
+			display: none;
+		}
+
+		.collapsing {
+			height: 0;
+			overflow: hidden;
+			transition: height 0.28s ease;
+		}
+
+	}
+}

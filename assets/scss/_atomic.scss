@@ -1,0 +1,40 @@
+@use "1-vars" as *;
+@use "2-mixins" as *;
+
+// Custom scrollbar
+.scrollbar {
+    scrollbar-color: $primary transparent;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $primary;
+        border-radius: 3px;
+    }
+}
+
+// Last child no margin bottom
+.lcnmb {
+    * {
+        &:last-child {
+            margin-bottom: 0 !important;
+        }
+    }
+}
+
+.not-found-text {
+    color: $primary;
+    background-image: url("assets/images/icons/24/message-circle-warning.svg");
+    background-size: 1.3em;
+    background-position: left top .2em;
+    background-repeat: no-repeat;
+    padding-left: 2em;
+    font-style: italic;
+}

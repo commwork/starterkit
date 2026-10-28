@@ -1,0 +1,136 @@
+/* Admin-only heading level debug (body classes set in functions/headings.php). */
+body.starterkit-heading-labels .starterkit-heading-labels-toggle__button {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 999999;
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 0.35rem;
+  padding: 0.38rem 0.85rem;
+  border: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  background: #23282d;
+  color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  font-family: inherit;
+  cursor: pointer;
+}
+
+body.starterkit-heading-labels--on #main h1,
+body.starterkit-heading-labels--on #main h2,
+body.starterkit-heading-labels--on #main h3,
+body.starterkit-heading-labels--on #main h4 {
+  position: relative;
+}
+body.starterkit-heading-labels--on #main h1::before,
+body.starterkit-heading-labels--on #main h2::before,
+body.starterkit-heading-labels--on #main h3::before,
+body.starterkit-heading-labels--on #main h4::before {
+  display: block;
+  width: fit-content;
+  position: relative;
+  border-radius: var(--radius-s);
+  color: #000;
+  font-weight: 500;
+}
+body.starterkit-heading-labels--on #main h1::before {
+  content: "H1";
+  background-color: rgba(157, 255, 0, 0.9);
+  font-size: 36px;
+  padding: 6px 12px;
+}
+body.starterkit-heading-labels--on #main h2::before {
+  content: "H2";
+  background-color: rgba(0, 255, 204, 0.9);
+  font-size: 24px;
+  padding: 6px 12px;
+}
+body.starterkit-heading-labels--on #main h3::before {
+  content: "H3";
+  background-color: rgba(128, 166, 238, 0.9);
+  font-size: 16px;
+  padding: 6px 12px;
+}
+body.starterkit-heading-labels--on #main h4::before {
+  content: "H4";
+  background-color: rgba(203, 169, 242, 0.9);
+  font-size: 16px;
+  padding: 6px 12px;
+}
+
+/* Admin-only breakpoint indicator (matches _2-mixins.scss *-up). */
+.responsive-control {
+  display: none;
+  position: fixed;
+  bottom: 1rem;
+  left: 6rem;
+  z-index: 999998;
+  padding: 0.35rem 0.65rem;
+  font-size: 12px;
+  line-height: 1.3;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background: #23282d;
+  color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+.responsive-control__bp {
+  display: none;
+}
+.responsive-control__bp--xs {
+  display: block;
+}
+@media (min-width: 576px) {
+  .responsive-control__bp--xs {
+    display: none;
+  }
+  .responsive-control__bp--sm {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  .responsive-control__bp--sm {
+    display: none;
+  }
+  .responsive-control__bp--md {
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  .responsive-control__bp--md {
+    display: none;
+  }
+  .responsive-control__bp--lg {
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  .responsive-control__bp--lg {
+    display: none;
+  }
+  .responsive-control__bp--xl {
+    display: block;
+  }
+}
+@media (min-width: 1400px) {
+  .responsive-control__bp--xl {
+    display: none;
+  }
+  .responsive-control__bp--xxl {
+    display: block;
+  }
+}
+@media (min-width: 2000px) {
+  .responsive-control__bp--xxl {
+    display: none;
+  }
+  .responsive-control__bp--xxxl {
+    display: block;
+  }
+}
+/*# sourceMappingURL=admin-frontend.css.map */

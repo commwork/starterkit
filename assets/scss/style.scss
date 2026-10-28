@@ -1,0 +1,60 @@
+/**!
+Theme Name: Baukasten
+Description: xxxxx
+Version: 0.0.1
+Author: COMMWORK
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: starterkit
+*/
+
+// Mixins/Variables
+@use "1-vars" as *;
+@use "2-mixins" as *;
+
+// CSS Reset
+@use "cssreset" as *;
+
+// Custom styles  
+@use "hacks" as *;
+@use "atomic" as *;
+@use "bootstrap" as *;
+@use "3-typography" as *;
+@use "links" as *;
+@use "accessibility" as *;
+@use "layout" as *;
+@use "images" as *;
+@use "jobs" as *;
+@use "news" as *;
+@use "forms" as *;
+@use "search" as *;
+@use "header" as *;
+@use "navigation" as *;
+@use "footer" as *;
+@use "404" as *;
+@use "swiper-global" as *;
+
+// Modules
+@use "../../template-parts/modules/slider/module-slider" as *;
+@use "../../template-parts/modules/accordion/module-accordion" as *;
+@use "../../template-parts/modules/persons/module-persons" as *;
+@use "../../template-parts/modules/offers_list/module-offers-list" as *;
+@use "../../template-parts/modules/downloads/module-downloads" as *;
+@use "../../template-parts/modules/image/module-image" as *;
+@use "../../template-parts/modules/text_image_teaser_2_col/module-text-image-teaser-2-col" as *;
+@use "../../template-parts/modules/infotext/module-infotext" as *;
+@use "../../template-parts/modules/email_phone_fax/module-email-phone-fax" as *;
+@use "../../template-parts/modules/benefits/module-benefits" as *;
+@use "../../template-parts/modules/compensation/module-compensation" as *;
+@use "../../template-parts/modules/process/module-process" as *;
+@use "../../template-parts/modules/module_events/module-module-events" as *;
+@use "../../template-parts/modules-news/single-news-modules" as *;
+
+// Heroes
+@use "../../template-parts/layout-parts/heroes/numbers/hero-numbers" as *;
+@use "../../template-parts/layout-parts/heroes/events_hero/hero-events" as *;
+@use "../../template-parts/layout-parts/heroes/chronicle/hero-chronicle" as *;
+@use "../../template-parts/layout-parts/heroes/teasers_subpages/hero-teaser-subpages" as *;
+@use "../../template-parts/layout-parts/heroes/process/hero-process" as *;
+@use "../../template-parts/layout-parts/heroes/jobs_with_filters/hero-jobs-filters" as *;
+@use "../../template-parts/layout-parts/heroes/news_slider/hero-news_slider" as *;

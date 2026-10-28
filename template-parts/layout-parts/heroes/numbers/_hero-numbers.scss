@@ -1,0 +1,27 @@
+@use "1-vars" as *;
+@use "2-mixins" as *;
+
+.numbers-item {
+    .numbers-number {
+        color: $primary;
+        font-weight: 900;
+        font-size: 4rem;
+        line-height: 0.9;
+        margin-bottom: var(--spacing-s);
+
+        @include md-up {
+            font-size: 5rem;
+        }
+        
+        @include lg-up {
+            text-align: right;
+            font-size: 6rem;
+        }
+    }
+
+    .numbers-title {
+        @include lg-up {
+            text-align: right;
+        }
+    }
+}

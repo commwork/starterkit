@@ -1,0 +1,158 @@
+@use "2-mixins" as *;
+
+/* Admin-only heading level debug (body classes set in functions/headings.php). */
+body.starterkit-heading-labels {
+	.starterkit-heading-labels-toggle__button {
+		position: fixed;
+		bottom: 1rem;
+		right: 1rem;
+		z-index: 999999;
+		display: inline-flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 0 0.35rem;
+		padding: 0.38rem 0.85rem;
+		border: 0;
+		font-size: 14px;
+		line-height: 1.4;
+		background: #23282d;
+		color: #fff;
+		border-radius: 3px;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+		font-family: inherit;
+		cursor: pointer;
+	}
+}
+
+body.starterkit-heading-labels--on #main {
+	h1,
+	h2,
+	h3,
+	h4 {
+		position: relative;
+
+		&::before {
+			display: block;
+			width: fit-content;
+			position: relative;
+			border-radius: var(--radius-s);
+			color: #000;
+			font-weight: 500;
+		}
+	}
+
+	h1::before {
+		content: 'H1';
+		background-color: rgba(157, 255, 0, 0.9);
+		font-size: 36px;
+		padding: 6px 12px;
+	}
+
+	h2::before {
+		content: 'H2';
+		background-color: rgba(0, 255, 204, 0.9);
+		font-size: 24px;
+		padding: 6px 12px;
+	}
+
+	h3::before {
+		content: 'H3';
+		background-color: rgba(128, 166, 238, 0.9);
+		font-size: 16px;
+		padding: 6px 12px;
+	}
+
+	h4::before {
+		content: 'H4';
+		background-color: rgba(203, 169, 242, 0.9);
+		font-size: 16px;
+		padding: 6px 12px;
+	}
+}
+
+/* Admin-only breakpoint indicator (matches _2-mixins.scss *-up). */
+
+.responsive-control {
+	display: none;
+	position: fixed;
+	bottom: 1rem;
+	left: 6rem;
+	z-index: 999998;
+	padding: 0.35rem 0.65rem;
+	font-size: 12px;
+	line-height: 1.3;
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+	background: #23282d;
+	color: #fff;
+	border-radius: 3px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+	pointer-events: none;
+
+	&__bp {
+		display: none;
+	}
+
+	&__bp--xs {
+		display: block;
+	}
+
+	@include sm-up {
+		&__bp--xs {
+			display: none;
+		}
+
+		&__bp--sm {
+			display: block;
+		}
+	}
+
+	@include md-up {
+		&__bp--sm {
+			display: none;
+		}
+
+		&__bp--md {
+			display: block;
+		}
+	}
+
+	@include lg-up {
+		&__bp--md {
+			display: none;
+		}
+
+		&__bp--lg {
+			display: block;
+		}
+	}
+
+	@include xl-up {
+		&__bp--lg {
+			display: none;
+		}
+
+		&__bp--xl {
+			display: block;
+		}
+	}
+
+	@include xxl-up {
+		&__bp--xl {
+			display: none;
+		}
+
+		&__bp--xxl {
+			display: block;
+		}
+	}
+
+	@include xxxl-up {
+		&__bp--xxl {
+			display: none;
+		}
+
+		&__bp--xxxl {
+			display: block;
+		}
+	}
+}

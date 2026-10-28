@@ -1,0 +1,48 @@
+@use "1-vars" as *;
+@use "2-mixins" as *;
+@use "3-typography" as *;
+
+.module-offers-list {
+    .offers-item {
+        .box {
+            background-color: $grey;
+            border-radius: var(--radius-standard);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .offers-item-content {
+            flex: 1;
+        }
+
+        .offers-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            color: $black;
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-s);
+
+            li {
+                display: flex;
+                align-items: flex-start;
+                gap: var(--spacing-s);
+            }
+
+            .offers-list-icon {
+                flex-shrink: 0;
+                width: 1em;
+                height: 1em;
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    margin-top: 0.25em;
+                }
+            }
+        }
+    }
+}

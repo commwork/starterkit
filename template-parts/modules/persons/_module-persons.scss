@@ -1,0 +1,83 @@
+@use "1-vars" as *;
+@use "3-typography" as *;
+
+.persons-list {
+    .person-image {
+        aspect-ratio: 15 / 9;
+        overflow: hidden;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .person-content {
+        // margin-top: calc(var(--spacing-l) * -1.3);
+        background-color: $grey;
+        color: $black;
+        z-index: 1;
+        position: relative;
+
+        .person-title {
+            color: $primary;
+            // margin-top: 0 !important;
+        }
+
+        .person-position {
+            font-size: $font-size-small;
+            line-height: 1.5;
+        }
+
+        .person-details {
+            p {
+                font-size: $font-size-small;
+                line-height: 1.5;
+            }
+        }
+
+        .person-phone,
+        .person-email {
+            overflow-wrap: break-word;
+            word-break: break-word;
+            background-size: auto 1em;
+            background-repeat: no-repeat;
+            background-position: left .2em;
+            padding-left: 1.75em;
+        }
+
+        .person-phone {
+            background-image: url('assets/svg/24/24-phone.svg');
+        }
+
+        .person-email {
+            background-image: url('assets/svg/24/24-mail.svg');
+        }
+    }
+
+    .person-image--placeholder{
+        + .person-content {
+            margin-top: 0;
+        }
+    }
+}
+
+.section--persons {
+    &.section--bg-grey {
+        background-color: $grey;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        width: calc(100% - 2rem);
+        border-radius: var(--radius-xl);
+    }
+
+    &:not(.section--bg-grey) {
+        background-color: $white;
+
+        .person-content {
+            background-color: $grey;
+        }
+    }
+}

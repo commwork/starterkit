@@ -1,0 +1,21 @@
+.text-end {
+	text-align: right !important;
+}
+
+@media (min-width: 1600px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1420px !important;
+    }
+}
+
+@media (min-width: 1800px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1620px !important;
+    }
+}
+
+@media (min-width: 2000px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 1820px !important;
+    }
+}

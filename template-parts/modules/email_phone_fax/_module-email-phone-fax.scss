@@ -1,0 +1,83 @@
+@use "1-vars" as *;
+@use "3-typography" as *;
+
+.module-email-phone-fax {
+	.email-phone-fax-item {
+		&__value {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 0.5em 1em;
+			overflow-wrap: anywhere;
+			background-repeat: no-repeat;
+			background-position: top .1em left;
+			background-size: 1.35em auto;
+			// padding-left: 2.4em;
+			min-height: 1.5em;
+		}
+
+		&__additional {
+			padding-left: 0;
+		}
+
+		&--phone .email-phone-fax-item__value {
+			&::before {
+				content: '';
+				display: block;
+				width: 1.75em;
+				height: 1.75em;
+				background-size: auto .9em;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-color: $grey;
+				border-radius: var(--radius-interact);
+				background-image: url('assets/svg/24/24-phone.svg');
+			}
+		}
+
+		&--fax .email-phone-fax-item__value {
+			&::before {
+				content: '';
+				display: block;
+				width: 1.75em;
+				height: 1.75em;
+				background-size: auto .9em;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-color: $grey;
+				border-radius: var(--radius-interact);
+				background-image: url('assets/svg/24/24-print.svg');
+			}
+		}
+
+		&--email .email-phone-fax-item__value {
+			&::before {
+				content: '';
+				display: block;
+				width: 1.75em;
+				height: 1.75em;
+				background-size: auto .9em;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-color: $grey;
+				border-radius: var(--radius-interact);
+				background-image: url('assets/svg/24/24-mail.svg');
+			}
+		}
+
+		&--address .email-phone-fax-item__value {
+			&::before {
+				content: '';
+				display: block;
+				width: 1.75em;
+				height: 1.75em;
+				background-size: auto .9em;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-color: $grey;
+				border-radius: var(--radius-interact);
+				background-image: url('assets/svg/24/24-pin-3.svg');
+			}
+		}
+	}
+}

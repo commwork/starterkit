@@ -1,0 +1,13 @@
+@use "1-vars" as *;
+@use "2-mixins" as *;
+
+// Shares news hero card styles via .section-news-module; events-specific overrides only.
+.section-events-hero.section-news-module {
+    .module-content.module-events {
+        .post-item {
+            .post-item-content {
+                border: 2px solid $primary;
+            }
+        }
+    }
+}

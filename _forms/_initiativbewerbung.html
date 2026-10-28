@@ -1,0 +1,41 @@
+<div class="row g-4">
+    <div class="col-12">
+        <div class="row g-4">
+            <div class="col-12 col-lg-6">
+                <label> Ihr Name (Pflichtfeld)
+                    [text* your-name autocomplete:name] </label>
+            </div>
+
+            <div class="col-12 col-lg-6">
+                <label> Ihre E-Mail-Adresse (Pflichtfeld)
+                    [email* your-email autocomplete:email] </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <label> Ihre Nachricht (optional)
+            [textarea your-message] </label>
+    </div>
+
+    <div class="col-12 files">
+        <p>Maximal <strong>4 MB</strong> pro Datei</p>
+        [file file-356 filetypes:zip|pdf|doc|docx limit:4mb]
+        [file file-366 filetypes:zip|pdf|doc|docx limit:4mb]
+        [file file-376 filetypes:zip|pdf|doc|docx limit:4mb]
+    </div>
+
+    <div class="col-12">
+        [acceptance acceptance-777] Ich stimme zu, dass meine Angaben aus dieser Nachricht zur Bearbeitung meiner
+        Meldung erhoben und verarbeitet werden. Die Daten werden nach abgeschlossener Bearbeitung Ihrer Anfrage
+        gelöscht. Hinweis: Sie können Ihre Einwilligung jederzeit für die Zukunft per E-Mail an datenschutz@awo-hamburg.de
+        widerrufen. Detaillierte Informationen zum Umgang mit Nutzerdaten finden Sie in unserer <a href="/datenschutzerklaerung/">Datenschutzerklärung</a>
+        [/acceptance]
+    </div>
+
+    <div class="col-12">
+        <div class="submit-wrapper">
+            [submit "Jetzt bewerben"]
+        </div>
+    </div>
+</div>

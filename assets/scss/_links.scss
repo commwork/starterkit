@@ -1,0 +1,209 @@
+@use "1-vars" as *;
+@use "2-mixins" as *;
+@use "3-typography" as *;
+
+a:not([class*="btn"]):not(.skip-link) {
+	text-decoration: none;
+	color: $primary;
+	transition: color 0.3s ease;
+	
+	@media (hover: hover) {
+		&:hover {
+			color: $black;
+			text-decoration: underline;
+			text-underline-offset: 3px;
+		}
+	}
+}
+
+.wrapper-link {
+	display: block;
+	height: 100%;
+	width: 100%;
+
+	@media (hover: hover) {
+		&:hover {
+			text-decoration: none !important;
+
+			.btn {
+				text-decoration: none !important;
+			}
+		}
+	}
+}
+
+.btn {
+	display: flex;
+	// ────────────────────────────────────────────────
+	// Add these to allow natural line breaks + safe breaking of long words
+	// white-space: normal;
+	// overflow-wrap: break-word;
+	// hyphens: auto;
+	// word-break: break-word;
+	// text-wrap: pretty;
+
+	width: fit-content;
+
+	&.primary {
+		text-decoration: none;
+		padding: var(--spacing-xs) var(--spacing-m);
+		border-radius: var(--radius-interact);
+		align-items: flex-start;
+		gap: var(--spacing-xs);
+		color: $primary;
+		border: 2px solid $primary;
+        transition: all 0.3s ease;
+
+		@media (hover: hover) {
+			&:hover {
+				color: $white;
+				background-color: $primary;
+				border: 2px solid $primary;
+			}
+		}
+
+        &.arrow-right {
+            background-image: url("assets/svg/24/24-arrow-right.svg");
+            background-size: .85em;
+            background-position: right .75em top .675em;
+            background-repeat: no-repeat;
+            padding-right: 2.6em;
+
+            @media (hover: hover) {
+				&:hover {
+					background-image: url("assets/svg/24/24-arrow-right.svg");
+				}
+            }
+        }
+
+        &.arrow-left {
+            background-image: url("assets/svg/24/24-arrow-left.svg");
+            background-size: 1em;
+            background-position: left .75em center;
+            background-repeat: no-repeat;
+            padding-left: 2.6em;
+
+            @media (hover: hover) {
+				&:hover {
+					background-image: url("assets/svg/24/24-arrow-left.svg");
+				}
+            }
+        }
+	}
+
+	&.primary--white {
+		text-decoration: none;
+		padding: var(--spacing-xs) var(--spacing-m);
+		border-radius: var(--radius-interact);
+		align-items: flex-start;
+		gap: var(--spacing-xs);
+		color: $white;
+		border: 2px solid $white;
+        transition: all 0.3s ease;
+
+		@media (hover: hover) {
+			&:hover {
+				color: $primary;
+				border: 2px solid $white;
+				background-color: $white;
+			}
+		}
+
+        &.arrow-right {
+            background-image: url("assets/svg/24/24-arrow-right.svg");
+            background-size: 1em;
+            background-position: right .75em center;
+            background-repeat: no-repeat;
+            padding-right: 2.6em;
+
+            @media (hover: hover) {
+				&:hover {
+					background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 20 20'%3E%3Cg stroke='%23e2001a' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' clip-path='url(%23a)'%3E%3Cpath d='M1.765 10h16.47M10 1.25 18.235 10 10 18.75'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath fill='%23e2001a' d='M0 0h20v20H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+				}
+            }
+        }
+
+        &.arrow-left {
+            background-image: url("assets/svg/24/24-arrow-left.svg");
+            background-size: 1em;
+            background-position: left .75em center;
+            background-repeat: no-repeat;
+            padding-left: 2.6em;
+
+            @media (hover: hover) {
+				&:hover {
+					background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round' viewBox='0 0 20 20'%3E%3Cpath d='M1.765 10h16.47M10 1.25 18.235 10 10 18.75' style='fill:none;fill-rule:nonzero;stroke:%23e2001a;stroke-width:2px' transform='matrix(-1 0 0 -1 20 20)'/%3E%3C/svg%3E");
+				}
+            }
+        }
+	}
+
+	&.secondary {
+		text-underline-offset: 4px;
+		text-decoration-thickness: 2px;
+		align-items: flex-start;
+		display: inline-flex;
+		gap: var(--spacing-xs);
+		color: $primary;
+
+		@media (hover: hover) {
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	&.tag {
+		text-decoration: none;
+		padding: .3em var(--spacing-s);
+		border-radius: .3rem;
+		align-items: flex-start;
+		gap: var(--spacing-xs);
+		color: $grey-even-darker;
+		border: 2px solid $grey-even-darker;
+		transition: all 0.3s ease;
+		font-size: $font-size-small;
+		font-weight: 500;
+
+		@media (hover: hover) {
+			&:hover {
+				color: $primary;
+				border: 2px solid $primary;
+			}
+		}
+	}
+	
+	&.category {
+		text-decoration: none;
+		padding: .3em var(--spacing-s);
+		border-radius: 2em;
+		align-items: flex-start;
+		gap: var(--spacing-xs);
+		color: $primary;
+		border: 2px solid $primary;
+		transition: all 0.3s ease;
+		font-size: $font-size-small;
+
+		@media (hover: hover) {
+			&:hover {
+				color: $primary;
+				border: 2px solid $primary;
+			}
+		}
+	}
+}
+
+.txt {
+	a:not([class*="btn"]) {
+		text-decoration: underline;
+		text-underline-offset: 3px;
+		color: $primary;
+		transition: color 0.3s ease;
+		
+		@media (hover: hover) {
+			&:hover {
+				color: $black;
+			}
+		}
+	}
+}

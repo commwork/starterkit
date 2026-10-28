@@ -1,0 +1,87 @@
+{
+    "key": "group_6a2020a1b2c01",
+    "title": "Veranstaltung",
+    "fields": [
+        {
+            "key": "field_6a2020a1b2c02",
+            "label": "Datum",
+            "name": "veranstaltung_datum",
+            "aria-label": "",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "j. F Y",
+            "return_format": "Ymd",
+            "first_day": 1,
+            "allow_in_bindings": 0,
+            "default_to_current_date": 0
+        },
+        {
+            "key": "field_6a2020a1b2c03",
+            "label": "Uhrzeit",
+            "name": "veranstaltung_uhrzeit",
+            "aria-label": "",
+            "type": "time_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "H:i",
+            "return_format": "H:i",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6a2008bd8ca05",
+            "label": "Ort",
+            "name": "veranstaltung_location",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "veranstaltungen"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1783431936
+}

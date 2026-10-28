@@ -1,0 +1,54 @@
+{
+    "key": "group_69de2d3965779",
+    "title": "Job Actions",
+    "fields": [
+        {
+            "key": "field_6a4276ab26b09",
+            "label": "Link \"Tarifinformationen anzeigen\"",
+            "name": "link_tarifinformationen_anzeigen",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "Den Link <strong>\"Tarifinformationen anzeigen\"<\/strong> bei Stellenangeboten mit folgender Kategorie ausblenden:",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "job_kategorie",
+            "add_term": 1,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "field_type": "checkbox",
+            "allow_in_bindings": 0,
+            "bidirectional": 0,
+            "multiple": 0,
+            "allow_null": 0,
+            "bidirectional_target": []
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "job-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1793103102
+}
