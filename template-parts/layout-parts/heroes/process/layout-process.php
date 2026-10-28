@@ -71,7 +71,7 @@ if ( get_row_layout() !== 'process' ) {
 														<span class="process-icon" style="<?php echo esc_attr( "--process-icon: url('" . esc_url( $process_icon_url ) . "');" ); ?>" aria-hidden="true"></span>
 
 														<?php if ( '' !== $process_title ) : ?>
-															<div class="h4 process-title"><?php echo esc_html( $process_title ); ?></div>
+															<div class="h3 process-title"><?php echo esc_html( $process_title ); ?></div>
 														<?php endif; ?>
 
 														<?php if ( '' !== $process_text_plain ) : ?>

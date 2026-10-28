@@ -47,7 +47,7 @@ if ( is_sticky() ) {
                 </div>
             <?php endif; ?>
 
-            <div class="h4">
+            <div class="h3">
                 <?php the_title(); ?>
             </div>
 

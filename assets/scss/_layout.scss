@@ -80,7 +80,7 @@ body{
 .section.bg-lightgrey {
     background-color: $grey;
     margin-top: var(--spacing-xl);
-    border-radius: var(--radius-xl);
+    // border-radius: var(--radius-xl);
     margin-left: $body-spacing-inner-x;
     margin-right: $body-spacing-inner-x;
     width: calc(100% - $body-spacing-inner-x * 2);
@@ -97,7 +97,7 @@ section.section {
         right: $body-spacing-inner-x;
         width: calc(100% - $body-spacing-inner-x * 2);
         z-index: 0;
-        border-radius: var(--radius-xl);
+        // border-radius: var(--radius-xl);
     }
 }
 

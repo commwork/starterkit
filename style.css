@@ -677,7 +677,6 @@ Text Domain: starterkit
 a:where(:any-link):focus-visible {
   outline: 2px solid #d00b4a;
   outline-offset: 2px;
-  border-radius: 4px;
   transition: none !important;
 }
 
@@ -764,7 +763,6 @@ body {
 .section.bg-lightgrey {
   background-color: #f3f3f3;
   margin-top: var(--spacing-xl);
-  border-radius: var(--radius-xl);
   margin-left: var(--body-spacing-inner-x);
   margin-right: var(--body-spacing-inner-x);
   width: calc(100% - var(--body-spacing-inner-x) * 2);
@@ -781,7 +779,6 @@ section.section--bordered {
   right: var(--body-spacing-inner-x);
   width: calc(100% - var(--body-spacing-inner-x) * 2);
   z-index: 0;
-  border-radius: var(--radius-xl);
 }
 
 .stack {
@@ -959,7 +956,6 @@ Text Domain: starterkit
 }
 .single-jobs .single-job article .single-job__intro .job-meta-info {
   background-color: #784ed3;
-  border-radius: var(--radius-m);
   padding: var(--spacing-l);
   color: #ffffff;
 }
@@ -987,14 +983,12 @@ Text Domain: starterkit
   display: block;
 }
 .single-jobs .single-job article .single-job__intro .header-hero > p:first-child img {
-  border-radius: var(--radius-m);
   width: 100%;
   height: 500px;
   object-fit: cover;
   display: block;
 }
 .single-jobs .single-job img:not([src$=".svg"]) {
-  border-radius: var(--radius-m);
   width: 100%;
   min-width: 100%;
   height: auto;
@@ -1049,7 +1043,6 @@ Text Domain: starterkit
 }
 .single-jobs .container-content .entry-content > div {
   background-color: #f3f3f3;
-  border-radius: var(--radius-standard);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -1198,24 +1191,9 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: starterkit
 */
-.section-news-archive.section--bg-grey,
-.section-news-module.section--bg-grey,
-.section-teasers-subpages.section--bg-grey {
-  background-color: #f3f3f3;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  width: calc(100% - 2rem);
-  border-radius: var(--radius-xl);
-}
-.section-news-archive.section--bg-grey .module-content .post-item .post-item-content,
-.section-news-module.section--bg-grey .module-content .post-item .post-item-content,
-.section-teasers-subpages.section--bg-grey .module-content .post-item .post-item-content {
-  border: 0;
-  background-color: #ffffff;
-}
-.section-news-archive:not(.section--bg-grey),
-.section-news-module:not(.section--bg-grey),
-.section-teasers-subpages:not(.section--bg-grey) {
+.section-news-archive,
+.section-news-module,
+.section-teasers-subpages {
   background-color: #ffffff;
 }
 
@@ -1330,7 +1308,7 @@ Text Domain: starterkit
   left: calc(var(--spacing-s) + 12.5px);
   width: 25px;
   height: 25px;
-  background-color: #ffffff;
+  background-color: #90cee2;
   -webkit-mask-image: url("assets/svg/32/32-pin-tack.svg");
   mask-image: url("assets/svg/32/32-pin-tack.svg");
   -webkit-mask-size: contain;
@@ -2055,7 +2033,6 @@ Text Domain: starterkit
   left: var(--spacing-xs);
   right: auto;
   outline: none;
-  border-radius: var(--radius-m);
 }
 
 .page main,
@@ -2076,7 +2053,6 @@ Text Domain: starterkit
   pointer-events: none;
   height: 300px;
   max-height: 600px;
-  border-radius: var(--radius-xl);
 }
 @media (max-width: 991.98px) {
   .header-thumbnail {
@@ -3732,7 +3708,6 @@ Text Domain: starterkit
 }
 .module-process .process-item .box {
   background-color: #784ed3;
-  border-radius: var(--radius-standard);
   color: #ffffff;
   display: flex;
   flex-direction: row;
@@ -3741,19 +3716,41 @@ Text Domain: starterkit
   gap: var(--spacing-m);
 }
 .module-process .process-item .box .process-icon {
+  position: relative;
+  width: 40px;
   max-width: 40px;
-  height: auto;
+  height: 40px;
   flex-shrink: 0;
 }
-@media (max-width: 991.98px) {
-  .module-process .process-item .box .process-icon {
-    max-width: 40px;
-  }
-}
 .module-process .process-item .box .process-icon .process-clock {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  overflow: visible;
+  pointer-events: none;
+}
+.module-process .process-item .box .process-icon .process-clock__shape,
+.module-process .process-item .box .process-icon .process-icon__glyph {
   display: block;
-  width: 100%;
-  height: auto;
+  width: 40px;
+  height: 40px;
+  background-color: #90cee2;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+.module-process .process-item .box .process-icon .process-clock__shape {
+  -webkit-mask-image: var(--process-clock-mask);
+  mask-image: var(--process-clock-mask);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+.module-process .process-item .box .process-icon .process-icon__glyph {
+  -webkit-mask-image: var(--process-icon);
+  mask-image: var(--process-icon);
+  -webkit-mask-size: contain;
+  mask-size: contain;
 }
 .module-process .process-item .box .process-icon .process-clock__hand {
   transform-box: view-box;
@@ -3770,7 +3767,7 @@ Text Domain: starterkit
 }
 .module-process .process-item .box .process-content .process-title {
   color: #ffffff;
-  margin-top: 0.4rem;
+  margin-top: 0;
 }
 .module-process .process-item .box .process-content .process-text {
   color: #ffffff;
@@ -4390,7 +4387,7 @@ Text Domain: starterkit
   width: 64px;
   height: 64px;
   margin-bottom: var(--spacing-m);
-  background-color: #ffffff;
+  background-color: #90cee2;
   -webkit-mask-image: var(--process-icon);
   mask-image: var(--process-icon);
   -webkit-mask-size: contain;

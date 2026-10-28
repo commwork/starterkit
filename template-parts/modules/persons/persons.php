@@ -41,7 +41,7 @@
                     <?php endif; ?>
 
                     <div class="person-content box box--s">
-                        <div class="h4 person-title">
+                        <div class="h3 person-title">
                             <?php the_title(); ?>
                         </div>
 
@@ -50,12 +50,16 @@
                                 <?php while ( have_rows( 'person_details' ) ) : the_row(); ?>
                                     <?php if ( get_sub_field( 'position' ) ) : ?>
                                         <div class="person-position">
-                                            <strong><?php echo esc_html( (string) get_sub_field( 'position' ) ); ?></strong>
+                                            <strong>
+                                                <?php echo esc_html( (string) get_sub_field( 'position' ) ); ?>
+                                            </strong>
                                         </div>
                                     <?php endif; ?>
 
                                     <?php if ( get_sub_field( 'bio' ) ) : ?>
-                                        <div class="person-bio"><?php echo wp_kses_post( (string) get_sub_field( 'bio' ) ); ?></div>
+                                        <div class="person-bio">
+                                            <?php echo wp_kses_post( (string) get_sub_field( 'bio' ) ); ?>
+                                        </div>
                                     <?php endif; ?>
 
                                     <?php if ( get_sub_field( 'phone' ) || get_sub_field( 'email' ) ) : ?>

@@ -7,16 +7,12 @@
 a:where(:any-link):focus-visible {
 	outline: 2px solid $accessibility-focus-ring-color;
 	outline-offset: 2px;
-	border-radius: 4px;
+	// border-radius: 4px;
 	transition: none !important;
 }
 
 main {
 	&:focus-visible {
-		// outline: 2px solid $accessibility-focus-ring-color;
-		// outline-offset: 2px;
-		// border-radius: 4px;
-
 		outline: 0;
 	}
 }

@@ -21,7 +21,6 @@
 
         .box {
             background-color: $primary;
-            border-radius: var(--radius-standard);
             color: $white;
             display: flex;
             flex-direction: row;
@@ -30,24 +29,50 @@
             gap: var(--spacing-m);
 
             .process-icon {
+                position: relative;
+                width: 40px;
                 max-width: 40px;
-                height: auto;
+                height: 40px;
                 flex-shrink: 0;
 
-                @include md-down {
-                    max-width: 40px;
+                .process-clock {
+                    position: absolute;
+                    width: 40px;
+                    height: 40px;
+                    overflow: visible;
+                    pointer-events: none;
                 }
 
-                .process-clock {
+                .process-clock__shape,
+                .process-icon__glyph {
                     display: block;
-                    width: 100%;
-                    height: auto;
+                    width: 40px;
+                    height: 40px;
+                    background-color: $tertiary;
+                    -webkit-mask-repeat: no-repeat;
+                    mask-repeat: no-repeat;
+                    -webkit-mask-position: center;
+                    mask-position: center;
+                }
 
-                    &__hand {
-                        transform-box: view-box;
-                        transform-origin: 12px 12px;
-                        transform: rotate(0deg);
-                    }
+                .process-clock__shape {
+                    -webkit-mask-image: var(--process-clock-mask);
+                    mask-image: var(--process-clock-mask);
+                    -webkit-mask-size: 100% 100%;
+                    mask-size: 100% 100%;
+                }
+
+                .process-icon__glyph {
+                    -webkit-mask-image: var(--process-icon);
+                    mask-image: var(--process-icon);
+                    -webkit-mask-size: contain;
+                    mask-size: contain;
+                }
+
+                .process-clock__hand {
+                    transform-box: view-box;
+                    transform-origin: 12px 12px;
+                    transform: rotate(0deg);
                 }
             }
 
@@ -61,7 +86,7 @@
 
                 .process-title {
                     color: $white;
-                    margin-top: .4rem;
+                    margin-top: 0;
                 }
     
                 .process-text {

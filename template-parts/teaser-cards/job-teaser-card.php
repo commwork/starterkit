@@ -32,7 +32,7 @@ defined( 'ABSPATH' ) || exit;
                 <?php echo esc_html( get_the_terms( get_the_ID(), 'job_kategorie' )[0]->name ); ?>
             </p>
 
-            <div class="h4">
+            <div class="h3">
                 <?php the_title(); ?>
             </div>
 

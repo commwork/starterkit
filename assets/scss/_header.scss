@@ -22,7 +22,7 @@
         left: var(--spacing-xs);
         right: auto;
         outline: none;
-        border-radius: var(--radius-m);
+        // border-radius: var(--radius-m);
     }
 }
 
@@ -52,7 +52,7 @@
     pointer-events: none;
     height: 300px;
     max-height: 600px;
-    border-radius: var(--radius-xl);
+    // border-radius: var(--radius-xl);
 
     @include md-down {
         /* Fix for menu overlapping the post thumb on mobile */

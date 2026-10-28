@@ -22,7 +22,7 @@
                         $process_time     = trim( (string) ( $icons_group['time_of_process_event'] ?? '' ) );
                     }
 
-                    $process_clock_svg  = baukasten_render_process_clock_svg( $process_time );
+                    $process_clock_svg  = starterkit_render_process_clock_svg( $process_time );
 
                     if ( '' === $process_title && '' === $process_text_plain && '' === $process_icon_url && '' === $process_clock_svg ) {
                         continue;
@@ -32,18 +32,18 @@
                         <div class="box box--s">
                             <div class="process-icon">
                                 <?php if ( '' !== $process_clock_svg ) : ?>
-                                    <?php echo $process_clock_svg; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped in baukasten_render_process_clock_svg(). ?>
+                                    <?php echo $process_clock_svg; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped in starterkit_render_process_clock_svg(). ?>
                                 <?php elseif ( '' !== $process_icon_url ) : ?>
-                                    <img src="<?php echo esc_url( $process_icon_url ); ?>" alt="" loading="lazy" decoding="async" />
+                                    <span class="process-icon__glyph" style="<?php echo esc_attr( "--process-icon: url('" . esc_url( $process_icon_url ) . "');" ); ?>" aria-hidden="true"></span>
                                 <?php else : ?>
-                                    <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/icons/circle-arrow-right.svg' ); ?>" alt="" loading="lazy" decoding="async" />
+                                    <span class="process-icon__glyph" style="<?php echo esc_attr( "--process-icon: url('" . esc_url( get_template_directory_uri() . '/assets/images/icons/circle-arrow-right.svg' ) . "');" ); ?>" aria-hidden="true"></span>
                                 <?php endif; ?>
                             </div>
 
                             <?php if ( '' !== $process_title || '' !== $process_text_plain ) : ?>
                                 <div class="process-content">
                                     <?php if ( '' !== $process_title ) : ?>
-                                        <div class="h4 process-title">
+                                        <div class="h3 process-title">
                                             <?php echo esc_html( $process_title ); ?>
                                         </div>
                                     <?php endif; ?>

@@ -27,6 +27,7 @@ while ( have_rows( 'header' ) ) :
 		continue;
 	}
 	?>
+	
 	<div class="section-header stack stack--m">
 		<?php if ( get_sub_field( 'subheadline' ) ) : ?>
 			<p class="section-description">

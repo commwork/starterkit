@@ -221,17 +221,26 @@ function starterkit_render_process_clock_svg( $time, $label = '' ) {
 
 	$label = '' !== trim( (string) $label ) ? trim( (string) $label ) : trim( (string) $time );
 
+	static $index = 0;
+	++$index;
+	$mask_id = 'process-clock-mask-' . $index;
+
 	ob_start();
 	?>
-	<svg class="process-clock" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="<?php echo esc_attr( $label ); ?>">
-		<circle cx="12" cy="12" r="10"></circle>
-		<g class="process-clock__hand process-clock__hand--minute" style="--hand-angle: <?php echo esc_attr( (string) $angles['minute'] ); ?>deg;">
-			<path d="M12 12 L12.00 7.00"></path>
-		</g>
-		<g class="process-clock__hand process-clock__hand--hour" style="--hand-angle: <?php echo esc_attr( (string) $angles['hour'] ); ?>deg;">
-			<path d="M12 12 L12.00 8.20"></path>
-		</g>
+	<svg class="process-clock" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+		<mask id="<?php echo esc_attr( $mask_id ); ?>" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox" x="0" y="0" width="1" height="1">
+			<svg viewBox="0 0 24 24" width="1" height="1" preserveAspectRatio="xMidYMid meet">
+			<circle cx="12" cy="12" r="10" fill="none" stroke="#fff" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></circle>
+			<g class="process-clock__hand process-clock__hand--minute" style="--hand-angle: <?php echo esc_attr( (string) $angles['minute'] ); ?>deg;">
+				<path d="M12 12 L12.00 7.00" fill="none" stroke="#fff" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+			</g>
+			<g class="process-clock__hand process-clock__hand--hour" style="--hand-angle: <?php echo esc_attr( (string) $angles['hour'] ); ?>deg;">
+				<path d="M12 12 L12.00 8.20" fill="none" stroke="#fff" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+			</g>
+			</svg>
+		</mask>
 	</svg>
+	<span class="process-clock__shape" style="<?php echo esc_attr( '--process-clock-mask: url(#' . $mask_id . ');' ); ?>" role="img" aria-label="<?php echo esc_attr( $label ); ?>"></span>
 	<?php
 	return ob_get_clean();
 }

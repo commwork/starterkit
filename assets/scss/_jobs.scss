@@ -43,7 +43,7 @@
                 }
                 .job-meta-info {
                     background-color: $primary;
-                    border-radius: var(--radius-m);
+                    // border-radius: var(--radius-m);
                     padding: var(--spacing-l);
                     color: $white;
 
@@ -80,7 +80,7 @@
                             display: block;
 
                             img {
-                                border-radius: var(--radius-m);
+                                // border-radius: var(--radius-m);
                                 width: 100%;
                                 height: 500px; // Fixed height required for Media Focus Point object-position to take effect
                                 object-fit: cover;
@@ -93,7 +93,7 @@
         }
 
         img:not([src$=".svg"]) {
-            border-radius: var(--radius-m);
+            // border-radius: var(--radius-m);
             width: 100%;
             min-width: 100%;
             height: auto;
@@ -164,7 +164,7 @@
             // Benefits box needs to be in a DIV
             > div {
                 background-color: #f3f3f3;
-                border-radius: var(--radius-standard);
+                // border-radius: var(--radius-standard);
                 height: 100%;
                 display: flex;
                 flex-direction: column;
