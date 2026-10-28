@@ -1,3 +1,201 @@
+/* ************** WP General ************** */
+#titlewrap input {
+  padding: 1.4em 12px !important;
+}
+
+#dashboard_site_health .inside .health-check-widget {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(64px, auto);
+  column-gap: 16px;
+  align-items: start;
+  text-align: left;
+}
+#dashboard_site_health .inside .health-check-widget .site-health-details {
+  padding-left: 0;
+  text-align: left;
+}
+
+#wpadminbar #wp-admin-bar-wp-logo {
+  display: none;
+}
+
+#adminmenu .wp-submenu-wrap * {
+  font-size: 12px !important;
+}
+
+#postimagediv .inside .hide-if-no-js a {
+  border: 2px dashed #dbdbdb;
+  padding: 1.4em 12px !important;
+  border-radius: 8px;
+  background-image: url("assets/svg/64/64-ai-generated-img.svg");
+  background-size: 24px;
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  display: block;
+}
+@media (hover: hover) {
+  #postimagediv .inside .hide-if-no-js a:hover {
+    border-color: #bdbdbd;
+  }
+}
+
+.postbox .postbox-header .handle-actions {
+  margin-right: 8px;
+}
+.postbox .postbox-header .handle-actions .wp-tooltip:nth-child(1), .postbox .postbox-header .handle-actions .wp-tooltip:nth-child(2) {
+  display: none;
+}
+.postbox .postbox-header .handle-actions .wp-tooltip:nth-child(3) .wp-tooltip__toggle .toggle-indicator::before {
+  content: "" !important;
+  background-image: url("assets/svg/24/24-chevron-up.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  height: 16px;
+  width: 16px;
+}
+.postbox.closed .postbox-header .handle-actions .wp-tooltip:nth-child(3) .wp-tooltip__toggle .toggle-indicator::before {
+  content: "" !important;
+  background-image: url("assets/svg/24/24-chevron-down.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  height: 16px;
+  width: 16px;
+}
+
+.nestedpages > .nplist {
+  margin-top: 20px !important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04) !important;
+  border: 1px solid #c3c4c7 !important;
+  border-radius: 6px !important;
+  overflow: hidden !important;
+}
+.nestedpages .nestedpages-list-header {
+  display: none;
+}
+.nestedpages .child-toggle .np-icon-arrow {
+  background-image: url("assets/svg/24/24-chevron-right.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  height: 16px;
+  width: 16px;
+  border: 0 !important;
+}
+
+#submitdiv #submitpost #minor-publishing #minor-publishing-actions #preview-action > a {
+  width: 100%;
+  margin-top: 7px;
+}
+#submitdiv #submitpost #minor-publishing #minor-publishing-actions #save-action #save-post {
+  width: 100%;
+}
+#submitdiv #submitpost #minor-publishing #minor-publishing-actions #save-action .spinner {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+#submitdiv #submitpost #misc-publishing-actions {
+  padding: 10px 0 10px;
+}
+#submitdiv #submitpost #misc-publishing-actions .misc-pub-section {
+  padding: 4px 10px 4px;
+}
+#submitdiv #submitpost #misc-publishing-actions .misc-pub-section::before {
+  display: none;
+}
+#submitdiv #submitpost #misc-publishing-actions .misc-pub-section #timestamp::before {
+  display: none;
+}
+#submitdiv #submitpost #misc-publishing-actions * {
+  font-size: 12px !important;
+}
+#submitdiv #submitpost #major-publishing-actions {
+  display: flex;
+  align-items: stretch;
+  flex-direction: row-reverse;
+}
+#submitdiv #submitpost #major-publishing-actions #delete-action {
+  width: 40px;
+  height: auto;
+  margin-left: 3px;
+}
+#submitdiv #submitpost #major-publishing-actions #delete-action a.submitdelete {
+  display: block;
+  position: relative;
+  border-radius: 3px;
+  height: 100%;
+  background-color: #de658d;
+  text-indent: -9999px !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+}
+#submitdiv #submitpost #major-publishing-actions #delete-action a.submitdelete::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  -webkit-mask-image: url("assets/svg/24/24-trash-2.svg");
+  mask-image: url("assets/svg/24/24-trash-2.svg");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  pointer-events: none;
+}
+#submitdiv #submitpost #major-publishing-actions #delete-action a.submitdelete:hover {
+  background-color: #a4385c;
+}
+#submitdiv #submitpost #major-publishing-actions #publishing-action {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+}
+#submitdiv #submitpost #major-publishing-actions #publishing-action .spinner {
+  position: absolute;
+  left: 10px;
+  right: auto;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+#submitdiv #submitpost #major-publishing-actions #publishing-action #publish {
+  width: 100%;
+}
+
+#pageparentdiv .inside * {
+  display: block !important;
+  width: 100% !important;
+}
+#pageparentdiv .inside .menu-order-label-wrapper {
+  display: none !important;
+}
+#pageparentdiv .inside .menu-order-label-wrapper + input {
+  display: none !important;
+}
+
+#wpfooter #footer-left {
+  display: none !important;
+}
+
+/* ************** ACF ************** */
+.acf-field-flexible-content .layout[data-layout=dynamic_modules] .acf-fc-layout-actions-wrap {
+  background-color: #efefef;
+}
+.acf-field-flexible-content .layout:not([data-layout=dynamic_modules]) .acf-fc-layout-actions-wrap {
+  background-color: #e7e2cf;
+}
+
 .acf-tooltip.acf-fc-popup ul {
   padding-top: 7px;
   padding-bottom: 7px;

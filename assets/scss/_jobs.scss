@@ -339,24 +339,24 @@
                 background-color: $black;
             }
 
-            a {
-                &.next {
-                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='%23e0001b' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' class='lucide lucide-arrow-right-icon lucide-arrow-right' viewBox='0 0 24 24'%3E%3Cpath d='M5 12h14M12 5l7 7-7 7'/%3E%3C/svg%3E");
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: 50%;
-                    text-indent: -9999px;
-                }
+            // a {
+            //     &.next {
+            //         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='%23e0001b' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' class='lucide lucide-arrow-right-icon lucide-arrow-right' viewBox='0 0 24 24'%3E%3Cpath d='M5 12h14M12 5l7 7-7 7'/%3E%3C/svg%3E");
+            //         background-repeat: no-repeat;
+            //         background-position: center;
+            //         background-size: 50%;
+            //         text-indent: -9999px;
+            //     }
 
-                &.prev {
-                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='%23e0001b' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' class='lucide lucide-arrow-right-icon lucide-arrow-right' viewBox='0 0 24 24'%3E%3Cpath d='M5 12h14M12 5l7 7-7 7'/%3E%3C/svg%3E");
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: 50%;
-                    text-indent: -9999px;
-                    transform: rotate(180deg);
-                }
-            }
+            //     &.prev {
+            //         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='%23e0001b' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' class='lucide lucide-arrow-right-icon lucide-arrow-right' viewBox='0 0 24 24'%3E%3Cpath d='M5 12h14M12 5l7 7-7 7'/%3E%3C/svg%3E");
+            //         background-repeat: no-repeat;
+            //         background-position: center;
+            //         background-size: 50%;
+            //         text-indent: -9999px;
+            //         transform: rotate(180deg);
+            //     }
+            // }
         }
     }
 }
