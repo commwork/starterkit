@@ -22,6 +22,11 @@ $news_query = new WP_Query(
 	)
 );
 
+$to_article = trim( (string) get_field( 'to_article', 'option' ) );
+if ( $to_article === '' ) {
+	$to_article = __( 'Zum Artikel', 'starterkit' );
+}
+
 $news_archive_url = home_url( '/' );
 $posts_page_id    = (int) get_option( 'page_for_posts' );
 if ( $posts_page_id > 0 ) {
@@ -86,7 +91,7 @@ if ( $posts_page_id > 0 ) {
 											?>
 
 											<a class="btn primary arrow-right" href="<?php the_permalink(); ?>">
-												<?php esc_html_e( 'Zum Artikel', 'starterkit' ); ?>
+												<?php echo esc_html( $to_article ); ?>
 											</a>
 										</div>
 									</div>
@@ -119,16 +124,15 @@ if ( $posts_page_id > 0 ) {
 
 					<div class="swiper-footer">
 						<div class="swiper-pagination"></div>
-						<!-- <div class="swiper-navigation">
-							<div class="swiper-button-prev" aria-label="<?php esc_attr_e( 'Previous slide', 'starterkit' ); ?>"></div>
-							<div class="swiper-button-next" aria-label="<?php esc_attr_e( 'Next slide', 'starterkit' ); ?>"></div>
-						</div> -->
 					</div>
 				</div>
 				
 			<?php wp_reset_postdata(); ?>
+
 			<?php else : ?>
-				<p class="not-found-text txt"><?php esc_html_e( 'Keine News gefunden.', 'starterkit' ); ?></p>
+				<p class="not-found-text txt">
+					<?php esc_html_e( 'Keine News gefunden.', 'starterkit' ); ?>
+				</p>
 			<?php endif; ?>
 
 		</div>		

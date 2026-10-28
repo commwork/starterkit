@@ -8,45 +8,19 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
-                background-color: $grey;
                 height: 100%;
                 position: relative;
+                border: 2px solid $primary;
 
                 .post-item-image {
+                    aspect-ratio: 16 / 9;
                     overflow: hidden;
-                    border-radius: var(--radius-m);
-                    margin: 0;
-                    width: 100%;
-        
+
                     img {
-                        width: 100%;
-                        height: 200px; // Fixed height required for Media Focus Point object-position to take effect
-                        object-fit: cover;
                         display: block;
-
-                        @include md-up {
-                            height: 200px;
-                        }
-
-                        @include lg-up {
-                            height: 180px;
-                        }
-
-                        @include xl-up {
-                            height: 220px;
-                        }
-
-                        @include xxl-up {
-                            height: 260px;
-                        }
-
-                        @media (min-width: 1800px) {
-                            height: 300px;
-                        }
-
-                        @include xxxl-up {
-                            height: 330px;
-                        }
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
                     }
                 }
 
@@ -61,9 +35,6 @@
 
             &.news-slider-slide--cta {
                 .post-item-content {
-                    background-color: transparent;
-                    // margin-right: 25px;
-
                     .wrapper-link {
                         width: 100%;
                         height: 100%;
@@ -76,10 +47,9 @@
                             text-decoration: none;
                         }
 
-                        
-
                         .news-slider-cta-stack {
                             height: 100%;
+                            
                             h2 {
                                 color: $white;
                             }

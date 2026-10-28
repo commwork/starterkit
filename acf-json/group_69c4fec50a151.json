@@ -9,7 +9,7 @@
             "aria-label": "",
             "type": "textarea",
             "instructions": "Dieser Text sollte knapp zusammenfassen worum es auf dieser Seite geht. Max. 500 zeichen.",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -52,5 +52,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1783431938
+    "modified": 1793186240
 }
