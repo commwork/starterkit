@@ -165,18 +165,19 @@ section.section {
         padding: var(--spacing-s);
 
         &:focus-visible {
-            border-radius: var(--radius-s);
+            // border-radius: var(--radius-s);
+            border-radius: 0;
         }
     }
 
     &--s {
         gap: var(--spacing-s);
         padding: var(--spacing-m);
-        border-radius: var(--radius-standard);
         overflow: hidden;
 
         &:focus-visible {
-            border-radius: var(--radius-standard);
+            // border-radius: var(--radius-standard);
+            border-radius: 0;
         }
     }
 
@@ -185,7 +186,8 @@ section.section {
         padding: var(--spacing-l);
 
         &:focus-visible {
-            border-radius: var(--radius-standard);
+            // border-radius: var(--radius-standard);
+            border-radius: 0;
         }
     }
 
@@ -194,7 +196,8 @@ section.section {
         padding: var(--spacing-xl);
 
         &:focus-visible {
-            border-radius: var(--radius-xl);
+            // border-radius: var(--radius-xl);
+            border-radius: 0;
         }
     }
 
@@ -203,7 +206,8 @@ section.section {
         padding: var(--spacing-xxl);
 
         &:focus-visible {
-            border-radius: var(--radius-xxl);
+            // border-radius: var(--radius-xxl);
+            border-radius: 0;
         }
     }
 

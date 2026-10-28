@@ -57,8 +57,6 @@ while ( have_posts() ) :
 			<div class="row g-3 single-job__intro">
 				<div class="col-12 col-lg-4">
 					<aside class="job-meta-info box" aria-label="<?php esc_attr_e( 'Stelleninformationen', 'starterkit' ); ?>">
-						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/icons/arrow-right.svg' ); ?>" alt="" class="icon-arrow-right" width="20" height="20" aria-hidden="true">
-
 						<ul class="job-meta-list">
 							<?php if ( $location ) : ?>
 								<li><strong><?php esc_html_e( 'Standort:', 'starterkit' ); ?></strong>&nbsp;<span><?php echo esc_html( $location ); ?></span></li>

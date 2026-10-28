@@ -17,39 +17,28 @@ $grey-even-much-darker : #555555;
 
 $accessibility-focus-ring-color: #d00b4a;
 $attention: #ebd491;
+$error: #d00b4a;
 
 // Fonts
 $font : "DM Sans", sans-serif;
 
 // Radius
 :root {
-	// --radius-s : 4px;
-	// --radius-m : 8px;
-	// --radius-l : 16px;
-	// --radius-standard : 16px;
-	// --radius-xl : 24px;
-
-	--radius-s : 0;
-	--radius-m : 0;
-	--radius-l : 0;
-	--radius-standard : 0;
-	--radius-xl : 0;
+	--radius-s : 4px;
+	--radius-m : 8px;
+	--radius-l : 16px;
+	--radius-standard : 16px;
+	--radius-xl : 24px;
 	--radius-interact : 3px;
 }
 
 @include md-up {
 	:root {
-		// --radius-s: 6px;
-		// --radius-m: 16px;
-		// --radius-l: 24px;
-		// --radius-standard: 24px;
-		// --radius-xl: 36px;
-
-		--radius-s: 0;
-		--radius-m: 0;
-		--radius-l: 0;
-		--radius-standard: 0;
-		--radius-xl: 0;
+		--radius-s: 6px;
+		--radius-m: 16px;
+		--radius-l: 24px;
+		--radius-standard: 24px;
+		--radius-xl: 36px;
 		--radius-interact: 5px;
 	}
 }

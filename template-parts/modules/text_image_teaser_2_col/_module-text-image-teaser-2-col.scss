@@ -24,7 +24,6 @@
 
 		&__inner {
 			background-color: $grey;
-			border-radius: var(--radius-standard);
 			height: 100%;
 		}
 
@@ -36,14 +35,21 @@
 			height: 70px;
 			margin-block-end: var(--spacing-sm);
 			background-color: $primary;
-			border-radius: var(--radius-m);
 			padding: var(--spacing-xs);
 
-			img {
+			span {
 				display: block;
 				width: 80%;
-				height: auto;
-				filter: brightness(0) invert(1);
+				aspect-ratio: 1;
+				background-color: $tertiary;
+				-webkit-mask-image: var(--teaser-icon);
+				mask-image: var(--teaser-icon);
+				-webkit-mask-size: contain;
+				mask-size: contain;
+				-webkit-mask-repeat: no-repeat;
+				mask-repeat: no-repeat;
+				-webkit-mask-position: center;
+				mask-position: center;
 			}
 		}
 
@@ -58,7 +64,6 @@
 
 		&__image {
 			overflow: hidden;
-			border-radius: var(--radius-standard);
 		}
 
 		&__image-container {

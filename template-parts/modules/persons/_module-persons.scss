@@ -14,6 +14,12 @@
         }
     }
 
+    .person-image--placeholder {
+        + .person-content {
+            margin-top: 0;
+        }
+    }
+
     .person-content {
         background-color: $grey;
         color: $black;
@@ -24,44 +30,75 @@
             color: $primary;
         }
 
-        .person-position {
-            font-size: $font-size-small;
-            line-height: 1.5;
-        }
-
         .person-details {
+            .person-position {
+                font-size: $font-size-small;
+                line-height: 1.5;
+            }
+
             p {
                 font-size: $font-size-small;
                 line-height: 1.5;
             }
-        }
 
-        .person-phone,
-        .person-email {
-            overflow-wrap: break-word;
-            word-break: break-word;
-            background-size: auto 1em;
-            background-repeat: no-repeat;
-            background-position: left .3em;
-            padding-left: 1.75em;
-
-            > * {
+            .person-contact {
+                background-color: $primary;
+                padding: var(--spacing-m);
+                color: $white;
                 font-size: $font-size-small;
+                line-height: 1.5;
+                margin-left: calc(var(--spacing-m) * -1);
+                margin-right: calc(var(--spacing-m) * -1);
+                margin-bottom: calc(var(--spacing-m) * -1);
+
+                a {
+                    color: $white;
+                }
+
+                a:hover,
+                a:focus-visible {
+                    color: $white;
+                }
+
+                .person-phone,
+                .person-email {
+                    position: relative;
+                    overflow-wrap: break-word;
+                    word-break: break-word;
+                    padding-left: 1.75em;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0.25em;
+                        left: 0;
+                        width: 1em;
+                        height: 1em;
+                        background-color: $tertiary;
+                        -webkit-mask-size: contain;
+                        mask-size: contain;
+                        -webkit-mask-repeat: no-repeat;
+                        mask-repeat: no-repeat;
+                        -webkit-mask-position: left center;
+                        mask-position: left center;
+                        pointer-events: none;
+                    }
+
+                    > * {
+                        font-size: $font-size-small;
+                    }
+                }
+
+                .person-phone::before {
+                    -webkit-mask-image: url('assets/svg/24/24-phone.svg');
+                    mask-image: url('assets/svg/24/24-phone.svg');
+                }
+
+                .person-email::before {
+                    -webkit-mask-image: url('assets/svg/24/24-mail.svg');
+                    mask-image: url('assets/svg/24/24-mail.svg');
+                }
             }
-        }
-
-        .person-phone {
-            background-image: url('assets/svg/24/24-phone.svg');
-        }
-
-        .person-email {
-            background-image: url('assets/svg/24/24-mail.svg');
-        }
-    }
-
-    .person-image--placeholder{
-        + .person-content {
-            margin-top: 0;
         }
     }
 }

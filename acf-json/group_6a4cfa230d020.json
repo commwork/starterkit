@@ -1,6 +1,6 @@
 {
     "key": "group_6a4cfa230d020",
-    "title": "Startseite Header\/Intro",
+    "title": "Startseite Header",
     "fields": [
         {
             "key": "field_6a4cfa2341e59",
@@ -211,5 +211,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1793110532
+    "modified": 1793200915
 }

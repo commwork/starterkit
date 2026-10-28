@@ -37,7 +37,7 @@
 							<div class="box box--sm">
 								<?php if ( '' !== $benefit_icon_url ) : ?>
 									<div class="benefits-box-header">
-										<img src="<?php echo esc_url( $benefit_icon_url ); ?>" alt="" class="benefits-icon" loading="lazy" decoding="async" />
+										<span class="benefits-icon" style="<?php echo esc_attr( "--benefits-icon: url('" . esc_url( $benefit_icon_url ) . "');" ); ?>" aria-hidden="true"></span>
 									</div>
 								<?php endif; ?>
 

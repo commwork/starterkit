@@ -169,8 +169,8 @@ foreach ( $starterkit_menu_by_parent[0] ?? array() as $starterkit_top_item ) {
 					<?php if ( ! is_front_page() ) : ?>
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="<?php esc_attr_e( 'Zur Startseite', 'starterkit' ); ?>">
 					<?php endif; ?>
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="Logo der AWO Vorpommern">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-small.svg" alt="Logo der AWO">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="Logo <?php echo esc_attr( wp_get_document_title() ); ?>">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-small.svg" alt="Logo <?php echo esc_attr( wp_get_document_title() ); ?>">
 					<?php if ( ! is_front_page() ) : ?>
 						</a>
 					<?php endif; ?>

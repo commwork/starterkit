@@ -36,7 +36,7 @@
 			width: 1.75em;
 			height: 1.75em;
 			border-radius: var(--radius-interact);
-			background-color: $grey;
+			background-color: $primary;
 		}
 
 		> div::after {
@@ -47,7 +47,7 @@
 			height: 0.9em;
 			margin-left: -2.325em;
 			margin-right: 0.425em;
-			background-color: $primary;
+			background-color: $tertiary;
 			-webkit-mask-size: contain;
 			mask-size: contain;
 			-webkit-mask-repeat: no-repeat;

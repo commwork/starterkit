@@ -79,7 +79,7 @@
 												<div class="text-image-teaser-2-col-item__content">
 													<?php if ( '' !== $icon_url ) : ?>
 														<div class="text-image-teaser-2-col-item__icon">
-															<img src="<?php echo esc_url( $icon_url ); ?>" alt="<?php echo esc_attr( $icon_alt ); ?>" loading="lazy" decoding="async" />
+															<span class="text-image-teaser-2-col-item__glyph" style="<?php echo esc_attr( "--teaser-icon: url('" . esc_url( $icon_url ) . "');" ); ?>"<?php echo '' !== $icon_alt ? ' role="img" aria-label="' . esc_attr( $icon_alt ) . '"' : ' aria-hidden="true"'; ?>></span>
 														</div>
 													<?php endif; ?>
 

@@ -14,8 +14,10 @@
 
         /* Process swiper */
         .process-swiper {
-            border-top-left-radius: var(--radius-l);
-            border-bottom-left-radius: var(--radius-l);
+            // border-top-left-radius: var(--radius-l);
+            // border-bottom-left-radius: var(--radius-l);
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
     
             .swiper-wrapper {
                 display: flex;
@@ -27,7 +29,8 @@
                     .box {
                         height: 100%;
                         background-color: $primary;
-                        border-radius: var(--radius-standard);
+                        // border-radius: var(--radius-standard);
+                        border-radius: 0;
                         color: $white;
         
                         .process-icon {
@@ -67,10 +70,5 @@
                 }
             }
         }
-    }
-
-    /* Slider footer */
-    .swiper-footer {
-        
     }
 }

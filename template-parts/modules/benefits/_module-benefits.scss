@@ -5,7 +5,6 @@
     .benefits-item {
         .box {
             background-color: $primary;
-            border-radius: var(--radius-standard);
             color: $white;
             height: 100%;
             display: flex;
@@ -14,12 +13,18 @@
 
             .benefits-box-header {
                 .benefits-icon {
+                    display: block;
                     width: 40px;
-                    max-width: 40px;
-                    height: auto;
-                    object-fit: contain;
-                    object-position: left center;
-                    filter: brightness(0) invert(1);
+                    height: 40px;
+                    background-color: $tertiary;
+                    -webkit-mask-image: var(--benefits-icon);
+                    mask-image: var(--benefits-icon);
+                    -webkit-mask-size: contain;
+                    mask-size: contain;
+                    -webkit-mask-repeat: no-repeat;
+                    mask-repeat: no-repeat;
+                    -webkit-mask-position: left center;
+                    mask-position: left center;
                 }
             }
 

@@ -2,21 +2,6 @@
 @use "2-mixins" as *;
 @use "3-typography" as *;
 
-// .chronicle-module {
-//     &.section--bg-grey {
-//         background-color: $grey;
-//         margin-left: 1rem;
-//         margin-right: 1rem;
-//         width: calc(100% - 2rem);
-//         border-radius: var(--radius-xl);
-
-//         .module-content .post-item .post-item-content {
-//             border: 0;
-//             background-color: $white;
-//         }
-//     }
-// }
-
 :root {
     --dock-height: 80px;
 }
@@ -75,10 +60,6 @@
         background: $primary;
         border-radius: 2px;
         transition: height 0.15s ease-out;
-
-        @include sm-down {
-            // display: none;        
-        }
     }
 
     .chronicle-year {
@@ -216,9 +197,6 @@
         flex: 0 0 calc(50% - var(--spacing-xxl) / 2);
 
         .chronicle-year-title {
-            // font-family: "Gravitas One", serif;
-            // font-weight: 400;
-            // font-style: normal;
             font-size: 12rem;
             font-weight: 900;
             color: $primary;

@@ -5,7 +5,7 @@
 .slider-module {
     /* Base swiper container */
     .swiper {
-        border-radius: var(--radius-standard);
+        // border-radius: var(--radius-standard);
     }
 
     .swiper, .swiper-wrapper, .swiper-slide {
@@ -129,15 +129,12 @@
             overflow: hidden;
             background-color: $white;
             color: $black;
-            border-radius: var(--radius-m);
+            // border-radius: var(--radius-m);
+            border-radius: 0;
             opacity: 0;   
             
             @include lg-up {
                 transition: left 0.4s ease-in-out, opacity 0.7s ease-in-out;
-            }
-
-            .slider-meta-title {
-                // color: $primary;
             }
 
             .slider-meta-title-row {
@@ -162,8 +159,6 @@
                 justify-content: center;
                 margin: 0;
                 padding: 0.35em 0.65em;
-                border-top-right-radius: var(--radius-m);
-                border-bottom-left-radius: var(--radius-m);
                 color: $black;
                 border: 1px solid $grey;
                 background-color: $grey;
@@ -175,6 +170,11 @@
                 position: absolute;
                 top: 0;
                 right: 0;
+
+                // border-top-right-radius: var(--radius-m);
+                // border-bottom-left-radius: var(--radius-m);
+                border-top-right-radius: 0;
+                border-bottom-left-radius: 0;
 
                 .slider-meta-caption-toggle-label {
                     display: block;

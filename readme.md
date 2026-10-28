@@ -1,4 +1,20 @@
 
+# Starterkit WP theme (Kickstart WP templates for several customers)
+## Features
+- basic modules (downloads, slider, headline, intro etc.)
+- basic hero modules
+- basic search function
+- main menu, footer menu
+- fully accessible
+- fully responsive
+- essential images have focus-point
+
+## Read this!
+- search whole project for "platzhalter" and replace reasonably
+- webfonts of AWO "FagoCo" in /fonts
+- example forms for "Contact Form 7": /_forms/*.html (use this as a base otherwise forms CSS will not fit 100%)
+- SVG icons are masked – change their color by editing pseudo-elements "background-color" in scss
+
 ## AOS options
 // Global settings:
 disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -9,7 +25,6 @@ useClassNames: false, // if true, will add content of `data-aos` as classes on s
 disableMutationObserver: false, // disables automatic mutations' detections (advanced)
 debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
 throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-
 
 // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
 offset: 120, // offset (in px) from the original trigger point

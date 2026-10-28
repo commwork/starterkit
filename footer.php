@@ -66,14 +66,12 @@
                                                 if ( '' === $alt ) {
                                                     $alt = $title;
                                                 }
-                                                echo wp_get_attachment_image(
-                                                    $icon_id,
-                                                    'full',
-                                                    false,
-                                                    array(
-                                                        'alt' => $alt,
-                                                    )
-                                                );
+                                                $icon_url = (string) wp_get_attachment_image_url( $icon_id, 'full' );
+                                                if ( '' !== $icon_url ) {
+                                                    echo '<span class="footer-social__icon" style="' . esc_attr( "--footer-icon: url('" . esc_url( $icon_url ) . "');" ) . '"' . ( '' !== $alt ? ' role="img" aria-label="' . esc_attr( $alt ) . '"' : ' aria-hidden="true"' ) . '></span>';
+                                                } elseif ( '' !== $title ) {
+                                                    echo esc_html( $title );
+                                                }
                                             } elseif ( '' !== $title ) {
                                                 echo esc_html( $title );
                                             }

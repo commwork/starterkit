@@ -2,14 +2,6 @@
 @use "2-mixins" as *;
 @use "3-typography" as *;
 
-body {
-    // scrollbar-gutter: stable both-edges;
-}
-
-html {
-    // scrollbar-gutter: stable;
-}
-
 .header {
     position: fixed;
     width: 100%;    
@@ -279,8 +271,6 @@ body:has(.header-nav-overlay.is-visible) {
         border-bottom-left-radius: var(--radius-l);
         border-bottom-right-radius: var(--radius-l);
         max-height: 70vh;
-        // min-height: 70vh;
-        // height: 70vh;
         overflow: hidden;
 
         &:before {

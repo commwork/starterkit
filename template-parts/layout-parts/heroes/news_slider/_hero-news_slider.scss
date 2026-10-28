@@ -62,8 +62,8 @@
     }
 
     .news-slider-swiper {
-        border-top-left-radius: var(--radius-l);
-        border-bottom-left-radius: var(--radius-l);
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
 
         .swiper-wrapper {
             display: flex;

@@ -6,8 +6,6 @@
 .section-teasers-subpages {
     .teasers-subpages-list {
         .box {
-            border: 2px solid #e0001b;
-            border-radius: var(--radius-standard);
             text-decoration: none !important;
             height: 100%;
             display: flex;
@@ -17,7 +15,6 @@
 
                 .teasers-subpages-item-content-thumbnail {
                     overflow: hidden;
-                    border-radius: var(--radius-m);
                     margin: 0;
                     width: 100%;
 

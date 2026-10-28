@@ -28,12 +28,13 @@
         margin-left: 1rem;
         margin-right: 1rem;
         width: calc(100% - 2rem);
-        border-radius: var(--radius-xl);
+        // border-radius: var(--radius-xl);
+        border-radius: 0;
 
         .module-content .post-item .post-item-content {
             border: 0;
             background-color: $white;
-        }
+        }   
     }
 
     &__field--hidden {
@@ -48,7 +49,8 @@
         gap: var(--spacing-m) var(--spacing-m);
         width: 100%;
         max-width: 100%;
-        border-radius: var(--radius-m);
+        // border-radius: var(--radius-m);
+        border-radius: 0;
         border-top: 2px dashed $grey-medium;
         border-bottom: 2px dashed $grey-medium;
         padding-top: var(--spacing-s);
@@ -126,7 +128,8 @@
         background-position: right .85rem center;
         background-size: 1rem;
         border: 0;
-        border-radius: var(--radius-m);
+        // border-radius: var(--radius-m);
+        border-radius: 0;
         color: $black;
         cursor: pointer;
         font-family: inherit;
