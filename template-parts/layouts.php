@@ -10,7 +10,7 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Layout `dynamic_modules` (choose_layout: a/b/c): header + modules columns.
+ * Layout `dynamic_modules` (`section_layout` a/b/c): header + modules columns.
  * Layout `chronicle`: full-width chronicle hero + timeline (`heroes/chronicle/layout-chronicle.php`, no modules_content).
  * Layout `numbers`: numbers hero (`heroes/numbers/layout-numbers.php`, no modules_content).
  * Layout `news`: Aktuelles hero (`heroes/news/layout-news.php`, no modules_content).
@@ -107,27 +107,33 @@ if ( have_rows( 'layouts' ) ) :
 			'layout-page-section--' . $layout_name,
 		);
 
+		$module_options = array();
+
 		if ( $layout_name === 'dynamic_modules' ) {
-			$choose_layout = (string) get_sub_field( 'choose_layout' );
-			if ( ! in_array( $choose_layout, array( 'layout_a', 'layout_b', 'layout_c' ), true ) ) {
-				$choose_layout = 'layout_a';
+			$module_options = get_sub_field( 'dynamic_modules_options' );
+			if ( ! is_array( $module_options ) ) {
+				$module_options = array();
 			}
 
-			$section_classes[] = 'layout-page-section--' . $choose_layout;
+			// a: header above content. b: header right. c: header left.
+			$section_layout = (string) ( $module_options['section_layout'] ?? '' );
+			if ( ! in_array( $section_layout, array( 'a', 'b', 'c' ), true ) ) {
+				$section_layout = 'a';
+			}
 
-			if ( in_array( $choose_layout, array( 'layout_b', 'layout_c' ), true ) ) {
+			$section_classes[] = 'layout-page-section--' . $section_layout;
+
+			if ( $section_layout === 'b' ) {
 				$container_class = 'container';
-
-				if ( $choose_layout === 'layout_b' ) {
-					$cols['header']  = 'col-12 col-lg-4';
-					$cols['content'] = 'col-12 col-lg-8';
-				} elseif ( $choose_layout === 'layout_c' ) {
-					$cols['header'] = 'col-12 col-lg-8';
-				}
+				$cols['header']  = 'col-12 col-xl-4 order-xl-2';
+				$cols['content'] = 'col-12 col-xl-8 order-xl-1';
+			} elseif ( $section_layout === 'c' ) {
+				$container_class = 'container';
+				$cols['header']  = 'col-12 col-xl-4';
+				$cols['content'] = 'col-12 col-xl-8';
 			}
 		}
 
-		$module_options  = get_sub_field( 'dynamic_modules_options' );
 		$section_bgcolor = '';
 
 		if ( is_array( $module_options ) ) {

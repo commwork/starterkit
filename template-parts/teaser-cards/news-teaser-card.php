@@ -34,7 +34,7 @@ $icon_uri = get_template_directory_uri() . '/assets/images/icons/24/';
                 <div class="news-meta stack stack--xs">
                     <p class="meta news-meta__date">
                         <span class="news-meta__icon" aria-hidden="true">
-                            <img src="<?php echo esc_url( $icon_uri . 'calendar.svg' ); ?>" alt="" width="24" height="24" loading="lazy" decoding="async" />
+                            <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/svg/24/24-calendar.svg' ); ?>" alt="" width="24" height="24" loading="lazy" decoding="async" />
                         </span>
                         <?php echo esc_html( get_the_date() ); ?>
                     </p>

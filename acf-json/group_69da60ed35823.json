@@ -1242,7 +1242,7 @@
                                     "sub_fields": [
                                         {
                                             "key": "field_6a43b3b1a03f7",
-                                            "label": "Text",
+                                            "label": "Text, Titel, Icon",
                                             "name": "text_group",
                                             "aria-label": "",
                                             "type": "group",
@@ -1255,7 +1255,6 @@
                                                 "id": ""
                                             },
                                             "layout": "block",
-                                            "parent_repeater": "field_6a43b2e0a03f1",
                                             "sub_fields": [
                                                 {
                                                     "key": "field_6a43c230b585f",
@@ -1263,7 +1262,7 @@
                                                     "name": "text_group_text_icon",
                                                     "aria-label": "",
                                                     "type": "image",
-                                                    "instructions": "<a href=\"https:\/\/lucide.dev\/icons\/\" target=\"_blank\">https:\/\/lucide.dev\/icons\/<\/a><br \/>\r\nStroke width: 2px<br \/>\r\nSize: 60px<br \/>\r\nAbsolute stroke width: Yes",
+                                                    "instructions": "",
                                                     "required": 0,
                                                     "conditional_logic": 0,
                                                     "wrapper": {
@@ -1406,7 +1405,8 @@
                                                     "max": "",
                                                     "button_label": "Eintrag hinzufügen"
                                                 }
-                                            ]
+                                            ],
+                                            "parent_repeater": "field_6a43b2e0a03f1"
                                         },
                                         {
                                             "key": "field_6a43b3eaa03f9",
@@ -1722,5 +1722,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1793182307
+    "modified": 1793184168
 }

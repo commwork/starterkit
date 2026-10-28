@@ -34,7 +34,7 @@
 						}
 						?>
 						<div class="col-12 col-md-6 col-xxl-4 benefits-item">
-							<div class="box box--s">
+							<div class="box box--sm">
 								<?php if ( '' !== $benefit_icon_url ) : ?>
 									<div class="benefits-box-header">
 										<img src="<?php echo esc_url( $benefit_icon_url ); ?>" alt="" class="benefits-icon" loading="lazy" decoding="async" />

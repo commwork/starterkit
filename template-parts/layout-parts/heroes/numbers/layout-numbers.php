@@ -35,21 +35,23 @@ if ( get_row_layout() !== 'numbers' ) {
 									$title_value  = trim( (string) get_sub_field( 'title' ) );
 									?>
 									<div class="col-12 col-sm-4 numbers-item">
-										<?php if ( '' !== $number_value ) : ?>
-											<p class="numbers-number">
-												<?php echo esc_html( $number_value ); ?>
-											</p>
-										<?php else : ?>
-											<p class="numbers-number"></p>
-										<?php endif; ?>
+										<div class="numbers-item-inner">
+											<?php if ( '' !== $number_value ) : ?>
+												<p class="numbers-number">
+													<?php echo esc_html( $number_value ); ?>
+												</p>
+											<?php else : ?>
+												<p class="numbers-number"></p>
+											<?php endif; ?>
 
-										<?php if ( '' !== $title_value ) : ?>
-											<p class="numbers-title">
-												<?php echo esc_html( $title_value ); ?>
-											</p>
-										<?php else : ?>
-											<p class="numbers-title"></p>
-										<?php endif; ?>
+											<?php if ( '' !== $title_value ) : ?>
+												<p class="numbers-title">
+													<?php echo esc_html( $title_value ); ?>
+												</p>
+											<?php else : ?>
+												<p class="numbers-title"></p>
+											<?php endif; ?>
+										</div>
 									</div>
 								<?php endwhile; ?>
 							<?php endif; ?>

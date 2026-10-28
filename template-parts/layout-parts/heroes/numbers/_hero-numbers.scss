@@ -19,6 +19,12 @@
         }
     }
 
+    .numbers-item-inner {
+        background-color: $grey;
+        padding: var(--spacing-s) var(--spacing-s);
+        border-radius: var(--radius-m);
+    }
+
     .numbers-title {
         @include lg-up {
             text-align: right;

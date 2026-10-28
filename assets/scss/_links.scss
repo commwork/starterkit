@@ -92,6 +92,14 @@ a:not([class*="btn"]):not(.skip-link) {
                 mask-position: center;
                 pointer-events: none;
             }
+
+			@media (hover: hover) {
+				&:hover {
+					&::after {
+						background-repeat: no-repeat;
+					}
+				}
+			}
         }
 
         &.arrow-left {
