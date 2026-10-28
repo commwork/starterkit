@@ -22,7 +22,7 @@
                         $process_time     = trim( (string) ( $icons_group['time_of_process_event'] ?? '' ) );
                     }
 
-                    $process_clock_svg  = starterkit_render_process_clock_svg( $process_time );
+                    $process_clock_svg  = baukasten_render_process_clock_svg( $process_time );
 
                     if ( '' === $process_title && '' === $process_text_plain && '' === $process_icon_url && '' === $process_clock_svg ) {
                         continue;
@@ -32,7 +32,7 @@
                         <div class="box box--s">
                             <div class="process-icon">
                                 <?php if ( '' !== $process_clock_svg ) : ?>
-                                    <?php echo $process_clock_svg; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped in starterkit_render_process_clock_svg(). ?>
+                                    <?php echo $process_clock_svg; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped in baukasten_render_process_clock_svg(). ?>
                                 <?php elseif ( '' !== $process_icon_url ) : ?>
                                     <img src="<?php echo esc_url( $process_icon_url ); ?>" alt="" loading="lazy" decoding="async" />
                                 <?php else : ?>

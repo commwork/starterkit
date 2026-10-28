@@ -3,6 +3,15 @@
 @use "3-typography" as *;
 
 // Jobs with filters (Kategorie sections + Ort/Beruf GET filters)
+.jobs-with-filters-module__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: var(--spacing-m);
+    padding-bottom: var(--spacing-m);
+}
+
 .jobs-with-filters-module {
     &__filters {
         &[hidden] {
@@ -40,8 +49,10 @@
         width: 100%;
         max-width: 100%;
         border-radius: var(--radius-m);
-        background-color: $grey;
-        padding: var(--spacing-m);
+        border-top: 2px dashed $grey-medium;
+        border-bottom: 2px dashed $grey-medium;
+        padding-top: var(--spacing-s);
+        padding-bottom: var(--spacing-s);
 
         @include lg-up {
             flex-direction: row;
@@ -89,10 +100,10 @@
 
     &__reset {
         white-space: nowrap;
-        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNlMDAwMWIiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1yb3RhdGUtY2N3LWljb24gbHVjaWRlLXJvdGF0ZS1jY3ciPjxwYXRoIGQ9Ik0zIDEyYTkgOSAwIDEgMCA5LTkgOS43NSA5Ljc1IDAgMCAwLTYuNzQgMi43NEwzIDgiLz48cGF0aCBkPSJNMyAzdjVoNSIvPjwvc3ZnPg==");
+        background-image: url("assets/svg/24/24-refresh.svg");
         background-repeat: no-repeat;
         background-position: left 0 center;
-        background-size: 1rem;
+        background-size: .9em;
         border: 0;
         padding-left: 1.5rem;
         background-color: transparent;
@@ -109,8 +120,8 @@
         min-width: 220px;
         max-width: 100%;
         appearance: none;
-        background-color: $white;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%23e0001b' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+        background-color: $grey;
+        background-image: url("assets/svg/24/24-chevron-down.svg");
         background-repeat: no-repeat;
         background-position: right .85rem center;
         background-size: 1rem;

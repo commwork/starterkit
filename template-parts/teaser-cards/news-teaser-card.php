@@ -8,11 +8,6 @@
 defined( 'ABSPATH' ) || exit;
 
 $icon_uri = get_template_directory_uri() . '/assets/images/icons/24/';
-
-$to_article = trim( (string) get_field( 'to_article', 'option' ) );
-if ( $to_article === '' ) {
-	$to_article = __( 'Zum Artikel', 'starterkit' );
-}
 ?>
 
 <article class="col-12 col-md-6 col-xxl-4 post-item<?php echo is_sticky() ? ' post-item--sticky' : ''; ?>">
@@ -55,7 +50,7 @@ if ( $to_article === '' ) {
             </div>
             
             <span class="btn primary arrow-right">
-                <?php echo esc_html( $to_article ); ?>
+                <?php echo esc_html( starterkit_to_article_label() ); ?>
             </span>                                        
         </div>
     </a>

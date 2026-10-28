@@ -904,7 +904,7 @@
                                             "name": "icon",
                                             "aria-label": "",
                                             "type": "image",
-                                            "instructions": "<a href=\"https:\/\/lucide.dev\/icons\/\" target=\"_blank\">https:\/\/lucide.dev\/icons\/<\/a><br \/>\r\nColor: #ffffff<br \/>\r\nStroke width: 2px<br \/>\r\nSize: 60px<br \/>\r\nAbsolute stroke width: Yes",
+                                            "instructions": "",
                                             "required": 0,
                                             "conditional_logic": 0,
                                             "wrapper": {
@@ -1007,5 +1007,5 @@
     "display_title": "Inhalte",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1793183181
+    "modified": 1793189141
 }

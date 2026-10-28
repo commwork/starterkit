@@ -31,12 +31,19 @@
                         color: $white;
         
                         .process-icon {
-                            width: 25%;
-                            height: auto;
-                            object-fit: contain;
-                            object-position: left center;
+                            display: block;
+                            width: 64px;
+                            height: 64px;
                             margin-bottom: var(--spacing-m);
-                            margin-left: -5px;
+                            background-color: $white;
+                            -webkit-mask-image: var(--process-icon);
+                            mask-image: var(--process-icon);
+                            -webkit-mask-size: contain;
+                            mask-size: contain;
+                            -webkit-mask-repeat: no-repeat;
+                            mask-repeat: no-repeat;
+                            -webkit-mask-position: left center;
+                            mask-position: left center;
                         }
         
                         .process-title {

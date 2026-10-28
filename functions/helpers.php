@@ -235,3 +235,52 @@ function starterkit_render_process_clock_svg( $time, $label = '' ) {
 	<?php
 	return ob_get_clean();
 }
+
+/**
+ * Label for links to a single news post. Option field `to_article`.
+ *
+ * @return string
+ */
+function starterkit_to_article_label() {
+	static $label = null;
+
+	if ( null !== $label ) {
+		return $label;
+	}
+
+	$label = trim( (string) get_field( 'to_article', 'option' ) );
+	if ( $label === '' ) {
+		$label = __( 'Zum Artikel', 'starterkit' );
+	}
+
+	return $label;
+}
+
+/**
+ * URL of the news overview. Option field `url_news_page`, otherwise the posts page.
+ *
+ * @return string
+ */
+function starterkit_news_archive_url() {
+	static $url = null;
+
+	if ( null !== $url ) {
+		return $url;
+	}
+
+	$url = trim( (string) get_field( 'url_news_page', 'option' ) );
+	if ( $url !== '' ) {
+		return $url;
+	}
+
+	$url           = home_url( '/' );
+	$posts_page_id = (int) get_option( 'page_for_posts' );
+	if ( $posts_page_id > 0 ) {
+		$posts_page = get_post( $posts_page_id );
+		if ( $posts_page instanceof WP_Post && 'publish' === $posts_page->post_status ) {
+			$url = get_permalink( $posts_page_id );
+		}
+	}
+
+	return $url;
+}

@@ -15,7 +15,7 @@ if ( get_row_layout() !== 'process' ) {
 ?>
 
 <section class="section section--xl section-process layout-page-section layout-page-section--process"<?php echo starterkit_layout_row_jump_link_id_attr(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-	<div class="container container-narrow">
+	<div class="container container">
 		<div class="row g-5">
 			<!-- Header -->
 			<?php if ( starterkit_layout_row_has_header_content() ) : ?>
@@ -63,11 +63,12 @@ if ( get_row_layout() !== 'process' ) {
 												?>
 												<div class="swiper-slide process-item">
 													<div class="box box--s">
-														<?php if ( '' !== $process_icon_url ) : ?>
-															<img src="<?php echo esc_url( $process_icon_url ); ?>" alt="" class="process-icon" loading="lazy" decoding="async" />
-														<?php else : ?>
-															<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/icons/circle-arrow-right.svg' ); ?>" alt="" class="process-icon" loading="lazy" decoding="async" />
-														<?php endif; ?>
+														<?php
+														if ( '' === $process_icon_url ) {
+															$process_icon_url = get_template_directory_uri() . '/assets/svg/64/64-arrow-right.svg';
+														}
+														?>
+														<span class="process-icon" style="<?php echo esc_attr( "--process-icon: url('" . esc_url( $process_icon_url ) . "');" ); ?>" aria-hidden="true"></span>
 
 														<?php if ( '' !== $process_title ) : ?>
 															<div class="h4 process-title"><?php echo esc_html( $process_title ); ?></div>

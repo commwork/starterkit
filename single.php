@@ -16,7 +16,7 @@
 
             <div class="col-12 col-lg-4 order-2 order-lg-1">
                 <div class="section-aside txt lcnmb">
-                    <a href="<?php echo home_url( '/aktuelles' ); ?>" class="btn primary arrow-left">
+                    <a href="<?php echo esc_url( starterkit_news_archive_url() ); ?>" class="btn primary arrow-left">
                         Zurück zur Aktuelles-Übersicht
                     </a>
                 </div>

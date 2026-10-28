@@ -22,19 +22,6 @@ $news_query = new WP_Query(
 	)
 );
 
-$to_article = trim( (string) get_field( 'to_article', 'option' ) );
-if ( $to_article === '' ) {
-	$to_article = __( 'Zum Artikel', 'starterkit' );
-}
-
-$news_archive_url = home_url( '/' );
-$posts_page_id    = (int) get_option( 'page_for_posts' );
-if ( $posts_page_id > 0 ) {
-	$posts_page = get_post( $posts_page_id );
-	if ( $posts_page instanceof WP_Post && 'publish' === $posts_page->post_status ) {
-		$news_archive_url = get_permalink( $posts_page_id );
-	}
-}
 ?>
 
 <section class="section section--xl section-news-slider layout-page-section"<?php echo starterkit_layout_row_jump_link_id_attr(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
@@ -91,7 +78,7 @@ if ( $posts_page_id > 0 ) {
 											?>
 
 											<a class="btn primary arrow-right" href="<?php the_permalink(); ?>">
-												<?php echo esc_html( $to_article ); ?>
+												<?php echo esc_html( starterkit_to_article_label() ); ?>
 											</a>
 										</div>
 									</div>
@@ -101,7 +88,7 @@ if ( $posts_page_id > 0 ) {
 							?>
 								<article class="swiper-slide post-item news-slider-slide--cta">
 									<div class="post-item-content">
-										<a href="<?php echo esc_url( home_url( '/aktuelles/' ) ); ?>" class="wrapper-link box box--s">
+										<a href="<?php echo esc_url( starterkit_news_archive_url() ); ?>" class="wrapper-link box box--s">
 											<div class="stack news-slider-cta-stack">
 												<h2 class="h4">
 													<?php esc_html_e( 'Mehr Info', 'starterkit' ); ?>
