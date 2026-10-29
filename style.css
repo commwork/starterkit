@@ -2840,7 +2840,10 @@ Text Domain: starterkit
 .accordion-module .accordion-item {
   border: 2px solid #784ed3;
   border-radius: 0;
-  overflow: hidden;
+}
+.accordion-module .accordion-item:has(.accordion-button:focus-visible) {
+  outline: 2px solid #d00b4a;
+  outline-offset: 2px;
 }
 .accordion-module .accordion-item .accordion-header {
   margin: 0;
@@ -2862,8 +2865,8 @@ Text Domain: starterkit
   display: none;
 }
 .accordion-module .accordion-item .accordion-button:focus-visible {
-  outline: 2px solid #ffffff;
-  outline-offset: 2px;
+  outline: none;
+  transition: none !important;
 }
 @media (hover: hover) {
   .accordion-module .accordion-item .accordion-button:hover {

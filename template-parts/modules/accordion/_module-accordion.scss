@@ -10,7 +10,11 @@
 		border: 2px solid $primary;
 		// border-radius: var(--radius-m);
 		border-radius: 0;
-		overflow: hidden;
+
+		&:has(.accordion-button:focus-visible) {
+			outline: 2px solid $accessibility-focus-ring-color;
+			outline-offset: 2px;
+		}
 
 		.accordion-header {
 			margin: 0;
@@ -34,8 +38,8 @@
 			}
 
 			&:focus-visible {
-				outline: 2px solid $white;
-				outline-offset: 2px;
+				outline: none;
+				transition: none !important;
 			}
 
 			@media (hover: hover) {
