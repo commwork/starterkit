@@ -1,6 +1,6 @@
 {
     "key": "group_6a2020a1b2c01",
-    "title": "Veranstaltung",
+    "title": "CPT – Veranstaltung",
     "fields": [
         {
             "key": "field_6a2020a1b2c02",
@@ -83,5 +83,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1783431936
+    "modified": 1793270887
 }

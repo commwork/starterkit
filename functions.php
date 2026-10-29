@@ -31,10 +31,8 @@ function starterkit_setup() {
 
 	register_nav_menus(
 		array(
-			'primary'            => esc_html__( 'Main', 'starterkit' ),
-			'primary-additional' => esc_html__( 'Main Additional', 'starterkit' ),
-			'sidebar'            => esc_html__( 'Sidebar', 'starterkit' ),
-			'footer'             => esc_html__( 'Footer', 'starterkit' ),
+			'primary' => esc_html__( 'Main', 'starterkit' ),
+			'footer'  => esc_html__( 'Footer', 'starterkit' ),
 		)
 	);
 }
@@ -56,11 +54,8 @@ add_filter( 'body_class', 'starterkit_body_class_has_thumbnail' );
  */
 function starterkit_add_image_sizes() {
 	add_image_size( 'img-large', 2048, 1152, true );
-	add_image_size( 'img-medium', 1300, 731, true );
-	add_image_size( 'img-small', 640, 360, true );
 	add_image_size( 'img-square', 500, 500, true );
 	add_image_size( 'img-square-large', 1000, 1000, true );
-	add_image_size( 'img-s', 992, 627, true );
 }
 add_action( 'after_setup_theme', 'starterkit_add_image_sizes' );
 
@@ -105,8 +100,8 @@ add_action( 'admin_menu', 'starterkit_updraftplus_menu_icon', 999 );
  */
 function starterkit_acf_color_picker_palette() {
 	$colors = array(
-		'#9e74d9', // primary
-		'#2ab35e', // secondary
+		'#784ed3', // primary
+		'#2a95b3', // secondary
 		'#90cee2', // tertiary
 		'#ffffff', // white
 		'#191919', // black

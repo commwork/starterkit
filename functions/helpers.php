@@ -124,19 +124,6 @@ function starterkit_layout_row_jump_link_id_attr( $fallback = '' ) {
 }
 
 /**
- * HTML for global empty / not-found messages.
- *
- * @param string $message     Translated plain text.
- * @param string $extra_class Optional extra classes.
- * @return string
- */
-function starterkit_get_not_found_text_html( $message, $extra_class = 'txt' ) {
-	$classes = trim( 'not-found-text ' . $extra_class );
-
-	return '<p class="' . esc_attr( $classes ) . '">' . esc_html( $message ) . '</p>';
-}
-
-/**
  * Render flexible content modules; `y-space` adds `--spacing-l` before the next sibling `.layout-module`.
  *
  * @param string $field_name ACF flexible content field name.

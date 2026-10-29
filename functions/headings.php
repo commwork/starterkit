@@ -78,26 +78,6 @@ function starterkit_enqueue_heading_labels_tools() {
 add_action( 'wp_enqueue_scripts', 'starterkit_enqueue_heading_labels_tools' );
 
 /**
- * Whether raw `header` field data includes a `titel`.
- *
- * @param mixed $header_raw Raw `header` value; uses current sub field when null.
- */
-function starterkit_header_raw_has_titel( $header_raw = null ) {
-	if ( null === $header_raw ) {
-		$header_raw = get_sub_field( 'header', false );
-	}
-
-	foreach ( starterkit_normalize_acf_group_rows( $header_raw ) as $header_row ) {
-		$titel = $header_row['titel'] ?? '';
-		if ( is_string( $titel ) && trim( $titel ) !== '' ) {
-			return true;
-		}
-	}
-
-	return false;
-}
-
-/**
  * h1 for the first section `titel` on the page, h2 for every later one (not on the front page).
  *
  * @param bool $consume When false, peek without reserving the page h1 slot.

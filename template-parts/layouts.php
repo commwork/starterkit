@@ -17,7 +17,6 @@ defined( 'ABSPATH' ) || exit;
  * Layout `news_slider`: Aktuelles slider hero (`heroes/news_slider/layout-news_slider.php`, no modules_content).
  * Layout `teasers_subpages`: Teaser Unterseiten hero (`heroes/teasers_subpages/layout-teasers_subpages.php`, no modules_content).
  * Layout `process`: Process hero (`heroes/process/layout-process.php`, no modules_content).
- * Layout `veranstaltungen_hero`: Veranstaltungen hero (`heroes/events_hero/layout-veranstaltungen_hero.php`, no modules_content).
  */
 
 if ( have_rows( 'layouts' ) ) :
@@ -73,12 +72,6 @@ if ( have_rows( 'layouts' ) ) :
 		// Process
 		if ( $layout_name === 'process' ) {
 			get_template_part( 'template-parts/layout-parts/heroes/process/layout-process' );
-			continue;
-		}
-
-		// Veranstaltungen hero
-		if ( $layout_name === 'veranstaltungen_hero' ) {
-			get_template_part( 'template-parts/layout-parts/heroes/events_hero/layout-veranstaltungen_hero' );
 			continue;
 		}
 

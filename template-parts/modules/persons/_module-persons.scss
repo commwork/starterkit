@@ -14,12 +14,6 @@
         }
     }
 
-    .person-image--placeholder {
-        + .person-content {
-            margin-top: 0;
-        }
-    }
-
     .person-content {
         background-color: $grey;
         color: $black;
@@ -99,24 +93,6 @@
                     mask-image: url('assets/svg/24/24-mail.svg');
                 }
             }
-        }
-    }
-}
-
-.section--persons {
-    &.section--bg-grey {
-        background-color: $grey;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        width: calc(100% - 2rem);
-        border-radius: var(--radius-xl);
-    }
-
-    &:not(.section--bg-grey) {
-        background-color: $white;
-
-        .person-content {
-            background-color: $grey;
         }
     }
 }

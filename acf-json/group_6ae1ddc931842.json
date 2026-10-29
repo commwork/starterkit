@@ -1,6 +1,6 @@
 {
     "key": "group_6ae1ddc931842",
-    "title": "Texte (allgemein)",
+    "title": "Option – Texte",
     "fields": [
         {
             "key": "field_6ae1ddc9e85ef",
@@ -45,5 +45,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1793187339
+    "modified": 1793271071
 }

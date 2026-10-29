@@ -760,14 +760,6 @@ body {
   }
 }
 
-.section.bg-lightgrey {
-  background-color: #f3f3f3;
-  margin-top: var(--spacing-xl);
-  margin-left: var(--body-spacing-inner-x);
-  margin-right: var(--body-spacing-inner-x);
-  width: calc(100% - var(--body-spacing-inner-x) * 2);
-}
-
 section.section {
   margin-left: var(--body-spacing-inner-x);
   margin-right: var(--body-spacing-inner-x);
@@ -2956,9 +2948,6 @@ Text Domain: starterkit
   height: 100%;
   object-fit: cover;
 }
-.persons-list .person-image--placeholder + .person-content {
-  margin-top: 0;
-}
 .persons-list .person-content {
   background-color: #f3f3f3;
   color: #191919;
@@ -3028,20 +3017,6 @@ Text Domain: starterkit
 .persons-list .person-content .person-details .person-contact .person-email::before {
   -webkit-mask-image: url("assets/svg/24/24-mail.svg");
   mask-image: url("assets/svg/24/24-mail.svg");
-}
-
-.section--persons.section--bg-grey {
-  background-color: #f3f3f3;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  width: calc(100% - 2rem);
-  border-radius: var(--radius-xl);
-}
-.section--persons:not(.section--bg-grey) {
-  background-color: #ffffff;
-}
-.section--persons:not(.section--bg-grey) .person-content {
-  background-color: #f3f3f3;
 }
 
 /**!
@@ -3744,19 +3719,6 @@ Text Domain: starterkit
   .numbers-item .numbers-title {
     text-align: right;
   }
-}
-
-/**!
-Theme Name: Baukasten
-Description: xxxxx
-Version: 0.0.1
-Author: COMMWORK
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: starterkit
-*/
-.section-events-hero.section-news-module .module-content.module-events .post-item .post-item-content {
-  border: 2px solid #784ed3;
 }
 
 /**!

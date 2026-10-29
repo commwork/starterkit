@@ -1,6 +1,6 @@
 {
     "key": "group_6ae1bfdc44656",
-    "title": "Footer Optionen",
+    "title": "Option – Footer",
     "fields": [
         {
             "key": "field_6ae1bfdc6ae64",
@@ -114,5 +114,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1793180024
+    "modified": 1793270812
 }
