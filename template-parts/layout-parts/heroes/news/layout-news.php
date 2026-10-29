@@ -120,7 +120,7 @@ $news_query->max_num_pages = (int) ceil( ( (int) $news_query->found_posts + coun
 
 		<!-- Content -->
 		<?php if ( $news_query->have_posts() ) : ?>
-			<div class="row module-content g-4">
+			<div class="row module-content g-5">
 				<?php
 				while ( $news_query->have_posts() ) :
 					$news_query->the_post();

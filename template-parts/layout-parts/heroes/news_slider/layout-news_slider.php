@@ -26,7 +26,7 @@ $news_query = new WP_Query(
 
 <section class="section section--xl section-news-slider layout-page-section"<?php echo starterkit_layout_row_jump_link_id_attr(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 	<div class="container stack stack--l">
-		<div class="row g-4">
+		<div class="row g-5">
 
 			<!-- Header -->
 			<?php if ( starterkit_layout_row_has_header_content() ) : ?>

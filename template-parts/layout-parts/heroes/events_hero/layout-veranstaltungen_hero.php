@@ -51,7 +51,7 @@ $veranstaltungen     = array_slice( $all_veranstaltungen, ( $paged - 1 ) * $per_
 
 		<!-- Content -->
 		<?php if ( ! empty( $veranstaltungen ) ) : ?>
-			<div class="row module-content module-events g-4">
+			<div class="row module-content module-events g-5">
 				<?php
 				foreach ( $veranstaltungen as $veranstaltung ) :
 					get_template_part(

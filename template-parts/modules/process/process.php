@@ -4,7 +4,7 @@
     <?php if ( have_rows( 'content' ) ) : ?>
         <?php while ( have_rows( 'content' ) ) : the_row(); ?>
 
-        <div class="row module-process g-3">
+        <div class="row module-process g-5">
             <?php if ( have_rows( 'process_repeater' ) ) : ?>
                 <?php
                 while ( have_rows( 'process_repeater' ) ) :

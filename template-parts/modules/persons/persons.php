@@ -25,11 +25,11 @@
 
 
     <?php if ( ! empty( $persons ) ) : ?>
-        <div class="row module-content persons-list g-3">
+        <div class="row module-content persons-list g-5">
             <?php foreach ( $persons as $post ) : ?>
                 <?php if ( ! $post instanceof WP_Post ) { continue; } ?>
                 <?php setup_postdata( $post ); ?>
-                <div class="col-12 col-sm-6 col-lg-4">
+                <div class="col-12 col-sm-6 col-xxl-4">
                     <?php $portrait = get_field( 'portrait', $post->ID ); ?>
                     <?php if ( $portrait ) : ?>
                         <?php $portrait_id = is_array( $portrait ) ? ( $portrait['ID'] ?? 0 ) : (int) $portrait; ?>

@@ -77,7 +77,7 @@
                     <div class="col-12">
                         <div class="teasers-subpages-list stack stack--s">
                             <?php while ( have_rows( 'content' ) ) : the_row(); ?>
-                                <div class="row g-3">
+                                <div class="row g-5">
                                     <?php $subpages = get_sub_field( 'subpages' ); ?>
                                     <?php if ( $subpages && is_array( $subpages ) ) : ?>
                                         <?php foreach ( $subpages as $subpage_post ) : ?>

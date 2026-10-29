@@ -15,7 +15,7 @@ if ( get_row_layout() !== 'numbers' ) {
 
 <section class="section section--xl numbers-module layout-page-section layout-page-section--numbers"<?php echo starterkit_layout_row_jump_link_id_attr(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 	<div class="container">
-		<div class="row g-3">
+		<div class="row g-5">
 			<!-- Header -->
 			<?php if ( starterkit_layout_row_has_header_content() ) : ?>
 				<div class="col-12 col-lg-4 stack stack--m">
@@ -26,7 +26,7 @@ if ( get_row_layout() !== 'numbers' ) {
 			<!-- Content -->
 			<?php if ( have_rows( 'content' ) ) : ?>
 				<div class="col-12 col-lg-8 stack stack--m">
-					<div class="row numbers-list g-3">
+					<div class="row numbers-list g-5">
 						<?php while ( have_rows( 'content' ) ) : the_row(); ?>
 							<?php if ( have_rows( 'numbers' ) ) : ?>
 								<?php while ( have_rows( 'numbers' ) ) : the_row(); ?>

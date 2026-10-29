@@ -38,7 +38,7 @@ if ( is_array( $content ) && ! empty( $content['subpages'] ) ) {
 			
 		<!-- Content -->	
 		<?php if ( ! empty( $subpages ) ) : ?>
-			<div class="row module-content g-4">
+			<div class="row module-content g-5">
 				<?php foreach ( $subpages as $subpage_post ) : ?>
 					<?php
 					$subpage_id = is_object( $subpage_post ) ? (int) $subpage_post->ID : (int) $subpage_post;

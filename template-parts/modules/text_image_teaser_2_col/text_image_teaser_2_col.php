@@ -71,7 +71,7 @@
 						$image_col_class = $has_text_content ? 'col-12 col-lg-6' : 'col-12';
 						?>
 						<div class="col-12 text-image-teaser-2-col-item">
-							<div class="row g-3 content-row">
+							<div class="row g-5 content-row">
 								<?php if ( $has_text_content ) : ?>
 									<div class="<?php echo esc_attr( $text_col_class ); ?> text-image-teaser-2-col-item__text">
 										<div class="text-image-teaser-2-col-item__inner box box--s">

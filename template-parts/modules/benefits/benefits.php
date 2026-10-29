@@ -2,7 +2,7 @@
 
 	<!-- Benefits -->
 	<?php if ( have_rows( 'content' ) ) : ?>
-		<div class="row module-benefits module-content benefits-list g-3">
+		<div class="row module-benefits module-content benefits-list g-5">
 			<?php while ( have_rows( 'content' ) ) : the_row(); ?>
 				<?php if ( have_rows( 'benefits' ) ) : ?>
 					<?php while ( have_rows( 'benefits' ) ) : the_row(); ?>
@@ -33,7 +33,7 @@
 							continue;
 						}
 						?>
-						<div class="col-12 col-md-6 col-xxl-4 benefits-item">
+						<div class="col-12 col-sm-6 col-xxl-4 benefits-item">
 							<div class="box box--sm">
 								<?php if ( '' !== $benefit_icon_url ) : ?>
 									<div class="benefits-box-header">
