@@ -189,7 +189,7 @@
 }
 
 /* ************** ACF ************** */
-#layouts > .acf-input > .acf-flexible-content > .ui-sortable > .layout:not([data-layout=dynamic_modules]) > .acf-fc-layout-actions-wrap {
+#layouts > .acf-input > .acf-flexible-content > .ui-sortable > .layout:not([data-layout=dynamic_modules]):not(.active-layout) > .acf-fc-layout-actions-wrap {
   background-color: #ede4d8;
 }
 

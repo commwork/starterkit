@@ -292,7 +292,7 @@
 
 /* ************** ACF ************** */
 // Flexible Content hero modules special background color
-#layouts > .acf-input > .acf-flexible-content > .ui-sortable > .layout:not([data-layout="dynamic_modules"]) {
+#layouts > .acf-input > .acf-flexible-content > .ui-sortable > .layout:not([data-layout="dynamic_modules"]):not(.active-layout) {
     > .acf-fc-layout-actions-wrap {
 		background-color: #ede4d8;
 	}
