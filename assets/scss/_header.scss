@@ -36,7 +36,7 @@
 
 .has-post-thumbnail {
     main {
-        // margin-top: var(--spacing-xl);
+        margin-top: var(--spacing-xl);
     }
 }
 
@@ -51,7 +51,6 @@
     pointer-events: none;
     height: 300px;
     max-height: 600px;
-    // border-radius: var(--radius-xl);
 
     @include md-down {
         /* Fix for menu overlapping the post thumb on mobile */
