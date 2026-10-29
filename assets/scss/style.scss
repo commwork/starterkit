@@ -24,7 +24,6 @@ Text Domain: starterkit
 @use "accessibility" as *;
 @use "layout" as *;
 @use "images" as *;
-@use "jobs" as *;
 @use "news" as *;
 @use "forms" as *;
 @use "search" as *;
@@ -56,5 +55,4 @@ Text Domain: starterkit
 @use "../../template-parts/layout-parts/heroes/chronicle/hero-chronicle" as *;
 @use "../../template-parts/layout-parts/heroes/teasers_subpages/hero-teaser-subpages" as *;
 @use "../../template-parts/layout-parts/heroes/process/hero-process" as *;
-@use "../../template-parts/layout-parts/heroes/jobs_with_filters/hero-jobs-filters" as *;
 @use "../../template-parts/layout-parts/heroes/news_slider/hero-news_slider" as *;

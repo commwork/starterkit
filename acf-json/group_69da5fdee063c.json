@@ -40,32 +40,6 @@
                             "layout": "block",
                             "sub_fields": [
                                 {
-                                    "key": "field_6ae0b58d1fedc",
-                                    "label": "Hintergrundfarbe",
-                                    "name": "section_bgcolor",
-                                    "aria-label": "",
-                                    "type": "radio",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "choices": {
-                                        "colorset-1": "Farbset 1",
-                                        "colorset-2": "Farbset 2"
-                                    },
-                                    "default_value": "colorset-1",
-                                    "return_format": "value",
-                                    "allow_null": 0,
-                                    "other_choice": 0,
-                                    "allow_in_bindings": 0,
-                                    "layout": "vertical",
-                                    "save_other_choice": 0
-                                },
-                                {
                                     "key": "field_6ae1cd4fe60fb",
                                     "label": "Layout",
                                     "name": "section_layout",
@@ -599,6 +573,27 @@
                                     "bidirectional": 0,
                                     "multiple": 0,
                                     "bidirectional_target": []
+                                },
+                                {
+                                    "key": "field_6ae3101997986",
+                                    "label": "News Anzahl",
+                                    "name": "news_count",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": 6,
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
                                 }
                             ]
                         }
@@ -667,82 +662,6 @@
                                     "message": "Die aktuellsten 5 News als Slider.",
                                     "new_lines": "wpautop",
                                     "esc_html": 0
-                                }
-                            ]
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "layout_69dcdde790996": {
-                    "key": "layout_69dcdde790996",
-                    "name": "jobs_with_filters",
-                    "label": "Jobs | Hero",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_69dcdde790999",
-                            "label": "Header",
-                            "name": "header",
-                            "aria-label": "",
-                            "type": "clone",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "clone": [
-                                "group_69a1651fca2e4"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
-                        },
-                        {
-                            "key": "field_69dcdde79099a",
-                            "label": "Inhalt",
-                            "name": "content",
-                            "aria-label": "",
-                            "type": "group",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "layout": "block",
-                            "sub_fields": [
-                                {
-                                    "key": "field_69dcdde79099b",
-                                    "label": "Job-Kategorien",
-                                    "name": "job_categories",
-                                    "aria-label": "",
-                                    "type": "taxonomy",
-                                    "instructions": "Die Kategorien der Jobs auswählen die hier angezeigt werden sollen (so kann man z.B. nur die Jobs eines bestimmten Bereichs anzeigen). Sollte hier keine Kategorie gewählt werden, werden alle Jobs angezeigt.",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "taxonomy": "job_kategorie",
-                                    "add_term": 0,
-                                    "save_terms": 0,
-                                    "load_terms": 0,
-                                    "return_format": "id",
-                                    "field_type": "multi_select",
-                                    "allow_null": 0,
-                                    "allow_in_bindings": 0,
-                                    "bidirectional": 0,
-                                    "multiple": 0,
-                                    "bidirectional_target": []
                                 }
                             ]
                         }
@@ -1007,5 +926,5 @@
     "display_title": "Inhalte",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1793189141
+    "modified": 1793265716
 }

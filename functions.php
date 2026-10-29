@@ -80,6 +80,27 @@ if ( function_exists( 'eae_encode_emails' ) ) {
 }
 
 /**
+ * Replace UpdraftPlus custom PNG menu icon with a Dashicon.
+ */
+function starterkit_updraftplus_menu_icon() {
+	global $menu;
+
+	if ( empty( $menu ) || ! is_array( $menu ) ) {
+		return;
+	}
+
+	foreach ( $menu as $key => $item ) {
+		if ( empty( $item[2] ) || 'options-general.php?page=updraftplus' !== $item[2] ) {
+			continue;
+		}
+
+		$menu[ $key ][6] = 'dashicons-update';
+		break;
+	}
+}
+add_action( 'admin_menu', 'starterkit_updraftplus_menu_icon', 999 );
+
+/**
  * Replace the eight default ACF color-picker swatches with the CI colors from assets/scss/_1-vars.scss.
  */
 function starterkit_acf_color_picker_palette() {
@@ -115,7 +136,5 @@ require_once $theme_functions . 'cpt.php';
 require_once $theme_functions . 'acf.php';
 require_once $theme_functions . 'search.php';
 require_once $theme_functions . 'veranstaltungen.php';
-require_once $theme_functions . 'job-import.php';
-require_once $theme_functions . 'jobs-with-filters.php';
 require_once get_template_directory() . '/cw-plugins/cw-plugins.php';
 require_once $theme_functions . 'minify.php';

@@ -139,6 +139,27 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_6ae30ed4d9a74",
+                            "label": "Überschrift",
+                            "name": "infotext_headline",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "Der Infotext wird in einer Box dargestellt und ist für einen kurzen wichtigen Text gedacht.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "rows": 2,
+                            "placeholder": "",
+                            "new_lines": "br"
+                        },
+                        {
                             "key": "field_6a3a68954ef64",
                             "label": "Text",
                             "name": "text",
@@ -1722,5 +1743,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1793207288
+    "modified": 1793265410
 }

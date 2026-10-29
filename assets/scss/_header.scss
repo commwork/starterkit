@@ -28,14 +28,13 @@
 
 .page,
 .search,
-.archive,
-.single-jobs {
+.archive {
     main {
         margin-top: var(--spacing-m);
     }
 }
 
-.has-post-thumbnail:not(.single-jobs) {
+.has-post-thumbnail {
     main {
         // margin-top: var(--spacing-xl);
     }

@@ -129,30 +129,6 @@ function starterkit_section_titel_heading_class( $tag ) {
 }
 
 /**
- * Teaser/card title level context (`h2` or `h3`).
- *
- * @param string $tag `h2` or `h3`.
- */
-function starterkit_set_job_teaser_headline_context( $tag ) {
-	$tag = strtolower( trim( (string) $tag ) );
-	$GLOBALS['starterkit_job_teaser_headline_tag'] = $tag === 'h2' ? 'h2' : 'h3';
-}
-
-/**
- * @param string $section_tag Section `titel` tag (`h1` or `h2`).
- */
-function starterkit_sync_teaser_headline_context_from_section_tag( $section_tag ) {
-	starterkit_set_job_teaser_headline_context( $section_tag === 'h1' ? 'h2' : 'h3' );
-}
-
-/**
- * @return string `h2` or `h3`
- */
-function starterkit_job_teaser_headline_tag() {
-	return $GLOBALS['starterkit_job_teaser_headline_tag'] ?? 'h3';
-}
-
-/**
  * Uses get_sub_field( 'header' ) only (does not call have_rows, so the partial can loop safely).
  *
  * @return bool

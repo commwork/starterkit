@@ -39,7 +39,6 @@ while ( have_rows( 'header' ) ) :
 			<?php
 			$headline_tag   = starterkit_section_titel_heading_tag();
 			$headline_class = starterkit_section_titel_heading_class( $headline_tag );
-			starterkit_sync_teaser_headline_context_from_section_tag( $headline_tag );
 			?>
 			<<?php echo tag_escape( $headline_tag ); ?> class="<?php echo esc_attr( $headline_class ); ?>">
 				<?php echo nl2br( esc_html( $titel ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>

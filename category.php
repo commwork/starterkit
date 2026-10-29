@@ -67,7 +67,6 @@ $used_tags = get_tags(
 		<div class="row">
 			<div class="col-12 module-content">
 				<?php if ( have_posts() ) : ?>
-					<?php starterkit_set_job_teaser_headline_context( 'h2' ); ?>
 					<div class="row g-4">
 						<?php while ( have_posts() ) : the_post(); ?>
 							<?php get_template_part( 'template-parts/teaser-cards/news-teaser-card' ); ?>
@@ -108,27 +107,34 @@ $used_tags = get_tags(
 						</h3>
 
 						<?php if ( ! empty( $used_categories ) ) : ?>
-							<?php foreach ( $top_level_categories as $parent_category ) : ?>
-								<div class="sidebar-category-group">
-									<div class="sidebar-category-parent">
-										<a href="<?php echo esc_url( get_category_link( $parent_category->term_id ) ); ?>" class="btn tag">
-											<?php echo esc_html( $parent_category->name ); ?>
-										</a>
-									</div>
-									<?php
-									$child_categories = $categories_by_parent[ (int) $parent_category->term_id ] ?? array();
-									if ( ! empty( $child_categories ) ) :
-										?>
-										<div class="sidebar-category-children">
-											<?php foreach ( $child_categories as $child_category ) : ?>
-												<a href="<?php echo esc_url( get_category_link( $child_category->term_id ) ); ?>" class="btn tag">
-													<?php echo esc_html( $child_category->name ); ?>
-												</a>
-											<?php endforeach; ?>
+
+							<div class="sidebar-categories">
+
+								<?php foreach ( $top_level_categories as $parent_category ) : ?>
+									<div class="sidebar-category-group">
+										<div class="sidebar-category-parent">
+											<a href="<?php echo esc_url( get_category_link( $parent_category->term_id ) ); ?>" class="btn tag">
+												<?php echo esc_html( $parent_category->name ); ?>
+											</a>
 										</div>
-									<?php endif; ?>
-								</div>
-							<?php endforeach; ?>
+										<?php
+										$child_categories = $categories_by_parent[ (int) $parent_category->term_id ] ?? array();
+										if ( ! empty( $child_categories ) ) :
+											?>
+											<div class="sidebar-category-children">
+												<?php foreach ( $child_categories as $child_category ) : ?>
+													<a href="<?php echo esc_url( get_category_link( $child_category->term_id ) ); ?>" class="btn tag">
+														<?php echo esc_html( $child_category->name ); ?>
+													</a>
+												<?php endforeach; ?>
+											</div>
+										<?php endif; ?>
+									</div>
+								<?php endforeach; ?>
+
+							</div>
+
+
 						<?php endif; ?>
 
 						<!-- Tags -->

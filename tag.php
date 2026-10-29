@@ -49,7 +49,6 @@ $used_tags = get_tags(
 	<div class="row">
 		<div class="col-12 module-content">
 			<?php if ( have_posts() ) : ?>
-				<?php starterkit_set_job_teaser_headline_context( 'h2' ); ?>
 				<div class="row g-4">
 					<?php while ( have_posts() ) : the_post(); ?>
 						<?php get_template_part( 'template-parts/teaser-cards/news-teaser-card' ); ?>

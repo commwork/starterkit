@@ -51,18 +51,18 @@
   background-image: url("assets/svg/24/24-chevron-up.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 18px;
-  height: 16px;
-  width: 16px;
+  background-size: 12px;
+  height: 12px;
+  width: 12px;
 }
 .postbox.closed .postbox-header .handle-actions .wp-tooltip:nth-child(3) .wp-tooltip__toggle .toggle-indicator::before {
   content: "" !important;
   background-image: url("assets/svg/24/24-chevron-down.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 16px;
-  height: 16px;
-  width: 16px;
+  background-size: 12px;
+  height: 12px;
+  width: 12px;
 }
 
 .nestedpages > .nplist {
@@ -79,9 +79,9 @@
   background-image: url("assets/svg/24/24-chevron-right.svg");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 16px;
-  height: 16px;
-  width: 16px;
+  background-size: 12px;
+  height: 12px;
+  width: 12px;
   border: 0 !important;
 }
 

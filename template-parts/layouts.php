@@ -17,7 +17,6 @@ defined( 'ABSPATH' ) || exit;
  * Layout `news_slider`: Aktuelles slider hero (`heroes/news_slider/layout-news_slider.php`, no modules_content).
  * Layout `teasers_subpages`: Teaser Unterseiten hero (`heroes/teasers_subpages/layout-teasers_subpages.php`, no modules_content).
  * Layout `process`: Process hero (`heroes/process/layout-process.php`, no modules_content).
- * Layout `jobs_with_filters`: Jobs hero + category links (`heroes/jobs_with_filters/layout-jobs_with_filters.php`, no modules_content).
  * Layout `veranstaltungen_hero`: Veranstaltungen hero (`heroes/events_hero/layout-veranstaltungen_hero.php`, no modules_content).
  */
 
@@ -77,12 +76,6 @@ if ( have_rows( 'layouts' ) ) :
 			continue;
 		}
 
-		// Jobs with filters (job_kategorie)
-		if ( $layout_name === 'jobs_with_filters' ) {
-			get_template_part( 'template-parts/layout-parts/heroes/jobs_with_filters/layout-jobs_with_filters' );
-			continue;
-		}
-
 		// Veranstaltungen hero
 		if ( $layout_name === 'veranstaltungen_hero' ) {
 			get_template_part( 'template-parts/layout-parts/heroes/events_hero/layout-veranstaltungen_hero' );
@@ -132,16 +125,6 @@ if ( have_rows( 'layouts' ) ) :
 				$cols['header']  = 'col-12 col-xl-4';
 				$cols['content'] = 'col-12 col-xl-8';
 			}
-		}
-
-		$section_bgcolor = '';
-
-		if ( is_array( $module_options ) ) {
-			$section_bgcolor = (string) ( $module_options['section_bgcolor'] ?? '' );
-		}
-
-		if ( in_array( $section_bgcolor, array( 'colorset-1', 'colorset-2' ), true ) ) {
-			$section_classes[] = $section_bgcolor;
 		}
 		?>
 		<section class="<?php echo esc_attr( implode( ' ', $section_classes ) ); ?>"<?php echo starterkit_layout_row_jump_link_id_attr(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>

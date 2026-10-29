@@ -154,17 +154,11 @@ endif;
 
 <?php 
 // Header thumbnail
-if ( is_singular() && ! is_singular( 'jobs' ) && has_post_thumbnail( get_queried_object_id() ) ) : ?>
+if ( is_singular() && has_post_thumbnail( get_queried_object_id() ) ) : ?>
 	<div class="header-thumbnail">
 		<?php echo get_the_post_thumbnail( get_queried_object_id(), 'full' ); ?>
 	</div>
 <?php else : ?>
-	<div class="header-no-thumbnail">
-		<!-- no thumbnail -->
-	</div>
-<?php endif; ?>
-
-<?php if ( is_singular( 'jobs' ) ) : ?>
 	<div class="header-no-thumbnail">
 		<!-- no thumbnail -->
 	</div>

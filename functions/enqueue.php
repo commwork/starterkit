@@ -44,7 +44,6 @@ function starterkit_scripts() {
 		array( 'starterkit_process_module', 'template-parts/modules/process/process.js', array() ),
 		array( 'starterkit_process', 'template-parts/layout-parts/heroes/process/process.js', array( 'swiper' ) ),
 		array( 'starterkit_news_slider', 'template-parts/layout-parts/heroes/news_slider/news-slider.js', array( 'swiper' ) ),
-		array( 'starterkit_jobs_filters', 'template-parts/layout-parts/heroes/jobs_with_filters/jobs-filters.js', array() ),
 	);
 
 	foreach ( $theme_scripts as $script ) {
